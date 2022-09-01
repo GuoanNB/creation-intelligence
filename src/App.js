@@ -44,15 +44,16 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-      <div className={`${activeDom === "trendingTopicExplorer" ? "Section-title Active-ection-title" : "Section-title"}`}>Trending topic explorer</div>
       <div className={`${activeDom === "headlineGenerator" ? "Section-title Active-ection-title" : "Section-title"}`}>Headline generator</div>
+      <div className={`${activeDom === "trendingTopicExplorer" ? "Section-title Active-ection-title" : "Section-title"}`}>Trending topic explorer</div>
       <div className={`${activeDom === "videoEditing" ? "Section-title Active-ection-title" : "Section-title"}`}>Video editing</div>
       </header>
       <div className="App-Container">
-        <div id={"trendingTopicExplorer"} ref={trendingTopicExplorerRef} style={{width: "100%", height: "900px", background: "red"}}></div>
         <div id={"headlineGenerator"} ref={headlineGeneratorRef} style={{width: "100%", height: "900px", background: "green"}}></div>
+        <div id={"trendingTopicExplorer"} ref={trendingTopicExplorerRef} style={{width: "100%", height: "900px", background: "red"}}>
+          
+        </div>
         <div id={"videoEditing"} ref={videoEditingRef} style={{width: "100%", height: "900px", background: "blue"}}></div>
-
       </div>
     </div>
   );
