@@ -1,0 +1,32 @@
+.font-normal {
+    font-family: 'Inter';
+    font-style: normal;
+    letter-spacing: 0.02em;
+}
+.align-center {
+    text-align: center;
+}
+.module-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    background: url(../../../public/fontBackground.png);
+    background-size: 100% 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.title {
+    margin-top: 13px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    color: #1A1A1A;
+}
+.description {
+    width: 900px;
+    margin: 35px auto 23px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #6B6B6B;
+}

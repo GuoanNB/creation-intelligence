@@ -2,6 +2,7 @@ import './index.css';
 import React from 'react';
 import { Table } from 'antd';
 import 'antd/dist/antd.css';
+import HeadlineGenerator from "../components/headlineGenerator";
 
 const columns = [
   { title: <div>Topic</div>, dataIndex: 'topic', key: 'topic' },
@@ -72,7 +73,9 @@ const Main = () => {
       <div className={`${activeDom === "videoEditing" ? "Section-title Active-ection-title" : "Section-title"}`}>Video editing</div>
       </header>
       <div className="App-Container">
-        <div id={"headlineGenerator"} ref={headlineGeneratorRef} style={{width: "100%", height: "900px", background: "green"}}></div>
+        <div id="headlineGenerator" ref={headlineGeneratorRef}>
+          <HeadlineGenerator />
+        </div>
         <div id={"trendingTopicExplorer"} className="trendingTopicExplorer" ref={trendingTopicExplorerRef} style={{width: "100%", height: "900px"}}>
         <div className="trendingTitle">
             Trending topic explorer
