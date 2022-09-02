@@ -1,7 +1,11 @@
 import "./index.css"
 import React from "react";
+import { Input, Button } from "antd";
+
+const { TextArea } = Input;
 const HeadlineGenerator = () => {
     const [tabIndex, setTabIndex] = React.useState(0);
+    const [words, setWords] = React.useState("");
     const TabBar = ({ tabIndex }) => {
         return <div className="tab">
             <div className={`tab-button${tabIndex === 0 ? " active" : ""}`} onClick={() => setTabIndex(0)}>
@@ -18,6 +22,14 @@ const HeadlineGenerator = () => {
             </div>
         </div>
     }
+    const Btns = () => {
+        return (
+            <div className="btns">
+                <Button className="btn">Sample content</Button>
+                <Button className="btn right-btn" type="primary">See results</Button>
+            </div>
+        )
+    }
     return (
         <>
             <span className="module-name font-normal align-center">Headline generator</span>
@@ -28,6 +40,14 @@ const HeadlineGenerator = () => {
             </div>
             <TabBar tabIndex={tabIndex} />
             <div className="sub-title font-normal">Enter message or use sample content</div>
+            <TextArea
+                className="text-area"
+                value={words}
+                onChange={e => setWords(e.target.value)}
+                placeholder="200 words minimal is required for better effects"
+                autoSize={{ minRows: 10, maxRows: 10 }}
+            />
+            <Btns></Btns>
         </>
     )
 }
