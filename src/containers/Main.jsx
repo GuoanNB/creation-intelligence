@@ -3,6 +3,8 @@ import React from 'react';
 import { Logo, Start, Shape, NameCard } from './assets';
 import 'antd/dist/antd.css';
 import ImageSlice from "../components/ImageSlice";
+import TrendingTopic from "../components/TrendingTopic";
+import HeadlineGenerator from "../components/headlineGenerator";
 
 const Main = () => {
   const trendingTopicExplorerRef = React.useRef(null);
@@ -88,8 +90,12 @@ const Main = () => {
           </div>
         </div>
 
-        <div id={"headlineGenerator"} ref={headlineGeneratorRef} className="section-container" style={{width: "100%", height: "900px", background: "lightggreen"}}></div>
-        <div id={"trendingTopicExplorer"} className="section-container" ref={trendingTopicExplorerRef} style={{width: "100%", height: "900px", background: "lightgray"}}>
+
+        <div id="headlineGenerator" ref={headlineGeneratorRef}>
+          <HeadlineGenerator />
+        </div>
+        <div id={"trendingTopicExplorer"} className="trendingTopicExplorer" ref={trendingTopicExplorerRef} style={{width: "100%", height: "900px"}}>
+          <TrendingTopic />
         </div>
         <div id={"videoEditing"} ref={videoEditingRef} className="section-container">
             <ImageSlice/>
