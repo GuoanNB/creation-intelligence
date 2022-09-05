@@ -1,22 +1,20 @@
 div {
     box-sizing: border-box;
 }
-.font-normal {
+.normal-font {
     font-family: 'Inter';
     font-style: normal;
     letter-spacing: 0.02em;
 }
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+.align-start {
+    text-align: start;
+}
 .align-center {
     text-align: center;
-}
-.module-name {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    background: url(../../../public/fontBackground.png);
-    background-size: 100% 100%;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
 }
 .title {
     margin-top: 13px;
@@ -57,17 +55,28 @@ div {
     line-height: 20px;
 }
 .active {
+    position: relative;
     font-weight: 600;
-    border: 1px solid black;
+    border: 1px solid transparent;
     border-radius: 16px;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(to right, #fff, #fff), linear-gradient(to right, #F4A628, #A829FE);
+    background-size: 100% 100%;
 }
-.sub-title {
-    width: 900px;
-    margin: 0 auto 8px;
+.normal-title {
+    color: #1A1A1A;
     text-align: start;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
+}
+.sub-title {
+    width: 900px;
+    margin: 0 auto 8px;
+}
+.suggestion-title {
+    margin-bottom: 8px;
 }
 .area-container {
     position: relative;
@@ -75,7 +84,7 @@ div {
     margin: auto;
 }
 .text-area {
-    border-radius: 4px;
+    border-radius: 4px; 
     position: relative;
 }
 .words-number {
@@ -105,4 +114,67 @@ div {
     width: 778px;
     margin-right: 8px;
     border-radius: 4px;
+}
+.suggestion {
+    width: 900px;
+    padding: 16px 18px 6px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.customize-suggestion {
+    margin: 24px auto 0;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+}
+.msn-suggestion {
+    margin: 0 auto;
+    border-radius: 0 0 4px 4px;
+    border-left: 1px solid #EBEBEB;
+    border-right: 1px solid #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
+}
+.suggestion-header {
+    width: 900px;
+    margin: 24px auto 0;
+    padding: 24px 16px 16px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px 4px 0 0;
+}
+.suggestion-header img {
+    width: 88px;
+    height: 50px;
+    border-radius: 4px;
+}
+.list-item {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.copy {
+    cursor: pointer;
+}
+.border-bottom {
+    border-bottom: 1px solid #E1E1E1;
+}
+.original-headline {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #717171;
+    margin-bottom: 4px;
+}
+.original-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #333333;
+}
+.number-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 38px;
 }
