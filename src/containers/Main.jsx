@@ -1,30 +1,9 @@
 import './index.css';
 import React from 'react';
-import { Table } from 'antd';
+import { Logo, Start, Shape, NameCard } from './assets';
 import 'antd/dist/antd.css';
+import ImageSlice from "../components/ImageSlice";
 
-const columns = [
-  { title: <div>Topic</div>, dataIndex: 'topic', key: 'topic' },
-  { title: 'Search volume', dataIndex: 'searchVolume', key: 'searchVolume' },
-  { title: 'MSN content supply', dataIndex: 'msn', key: 'msn' }
-];
-
-const data = [
-  {
-    key: 1,
-    topic: <div>Family day</div> ,
-    searchVolume: '300,232',
-    msn: 'Scarce',
-    description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.',
-  },
-  {
-    key: 2,
-    topic: 'Jim Green',
-    searchVolume: '422,333',
-    msn: 'Moderate',
-    description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-  },
-]
 const Main = () => {
   const trendingTopicExplorerRef = React.useRef(null);
   const headlineGeneratorRef = React.useRef(null);
@@ -67,59 +46,54 @@ const Main = () => {
   return (
     <div className="App">
       <header className="App-header">
-      <div className={`${activeDom === "headlineGenerator" ? "Section-title Active-ection-title" : "Section-title"}`}>Headline generator</div>
-      <div className={`${activeDom === "trendingTopicExplorer" ? "Section-title Active-ection-title" : "Section-title"}`}>Trending topic explorer</div>
-      <div className={`${activeDom === "videoEditing" ? "Section-title Active-ection-title" : "Section-title"}`}>Video editing</div>
+        <div className="App-logo">
+          {Logo()}
+          Intelligence home
+        </div>
+      <div className={`${activeDom === "headlineGenerator" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
+        headlineGeneratorRef.current.scrollIntoView();
+      }}>{Start(activeDom === "headlineGenerator")}Headline generator</div>
+      <div className={`${activeDom === "trendingTopicExplorer" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
+        trendingTopicExplorerRef.current.scrollIntoView();
+      }}>{Shape(activeDom === "trendingTopicExplorer")}Trending topic explorer</div>
+      <div className={`${activeDom === "videoEditing" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
+        videoEditingRef.current.scrollIntoView();
+      }}>{ NameCard( activeDom === "videoEditing")} Video editing</div>
       </header>
       <div className="App-Container">
-        <div id={"headlineGenerator"} ref={headlineGeneratorRef} style={{width: "100%", height: "900px", background: "green"}}></div>
-        <div id={"trendingTopicExplorer"} className="trendingTopicExplorer" ref={trendingTopicExplorerRef} style={{width: "100%", height: "900px"}}>
-        <div className="trendingTitle">
+        <div className="Page-top-area-container">
+          <div className="Page-top-area-title">
+          Intelligence empowers creators
+          </div>
+          <div className="Page-top-sub-title">Microsoft intelligence home helps users to create content and advertise.</div>
+          <div className="Page-top-cubes-container">
+            <div className="Page-top-cube" onClick={() => {
+              headlineGeneratorRef.current.scrollIntoView();
+            }}>
+            <div>{Start(false, 40)}</div>
             Trending topic explorer
-        </div>
-        <div className='mainTitle'>
-          Understand what content people are looking for
-        </div>
-        <div className="content">
-          By inspecting and analyzing current focuses of users, we associate the reading demands with relevant hot topics and recommend suitable ones for creation to users. Daily update on 10+ categories of latest hottest industry clues. Suitable scenarios: hot topic finding, idea inspiration.
-        </div>
-        <div className='trafficBoost'>
-          <span className='trafficNumber'>26%</span>
-          <span>trending topic related contents get traffic boost after new trending occurs in recent 30 days</span>
-        </div>
-        <div className="filter">
-            <div className="data">
-              <span>Date:</span>
-              <span>Today</span>
-              <span>Yesterday</span>
-              <span>8/19</span>
-              <span>8/18</span>
-              <span>8/17</span>
-              <span>8/16</span>
-              <span>8/15</span>
             </div>
-            <div className="Vertical">
-              <span>Vertical:</span>
-              <span>All</span>
-              <span>News</span>
-              <span>Finace</span>
-              <span>Sports</span>
-              <span>Technology</span>
+            <div className="Page-top-cube" onClick={() => {
+              trendingTopicExplorerRef.current.scrollIntoView();
+            }}>
+            <div>{Shape(false, 40)}</div>
+            Headline generator
             </div>
+            <div className="Page-top-cube"  onClick={() => {
+              videoEditingRef.current.scrollIntoView();
+            }}>
+            <div>{NameCard(false, 40)}</div>
+            Video editing
+            </div>
+          </div>
         </div>
-        <div className="displayContent">
-          <Table
-              pagination={false}
-              columns={columns}
-              expandable={{
-                expandedRowRender: record => <p style={{ margin: 0 }}>{record.description}</p>,
-                rowExpandable: record => record.name !== 'Not Expandable',
-              }}
-              dataSource={data}
-          />
+
+        <div id={"headlineGenerator"} ref={headlineGeneratorRef} className="section-container" style={{width: "100%", height: "900px", background: "lightggreen"}}></div>
+        <div id={"trendingTopicExplorer"} className="section-container" ref={trendingTopicExplorerRef} style={{width: "100%", height: "900px", background: "lightgray"}}>
         </div>
+        <div id={"videoEditing"} ref={videoEditingRef} className="section-container">
+            <ImageSlice/>
         </div>
-        <div id={"videoEditing"} ref={videoEditingRef} style={{width: "100%", height: "900px", background: "blue"}}></div>
       </div>
     </div>
   );
