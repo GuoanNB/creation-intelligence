@@ -2,7 +2,8 @@ import './index.css';
 import React from 'react';
 import { Table } from 'antd';
 import 'antd/dist/antd.min.css';
-
+import Slider  from './slider';
+import example from '../../images/example.png'
 const columns = [
   { title: <div>Topic</div>, dataIndex: 'topic', key: 'topic' },
   { title: 'Search volume', dataIndex: 'searchVolume', key: 'searchVolume' },
@@ -15,7 +16,44 @@ const data = [
     topic: <div>Family day</div> ,
     searchVolume: '300,232',
     msn: 'Scarce',
-    description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.',
+    description: <div className="sliderContainer">
+                <Slider selectedIndex={0} onClick={()=> {}}>
+                    <div className="item">
+                        <img src={example} alt="" />
+                        <div className='itemContent'>
+                            <span>How a visual artist redefines sucess in graphic defign</span>
+                        </div>
+                        <div className='itemResource'>MSN</div>
+                    </div>
+                    <div className="item">
+                    <img src={example} alt="" />
+                        <div className='itemContent'>
+                            <span>How a visual artist redefines sucess in graphic defign</span>
+                        </div>
+                        <div className='itemResource'>MSN</div>
+                    </div>
+                    <div className="item">
+                    <img src={example} alt="" />
+                        <div className='itemContent'>
+                            <span>How a visual artist redefines sucess in graphic defign</span>
+                        </div>
+                        <div className='itemResource'>MSN</div>
+                    </div>
+                    <div className="item">
+                    <img src={example} alt="" />
+                        <div className='itemContent'>
+                            <span>How a visual artist redefines sucess in graphic defign</span>
+                        </div>
+                        <div className='itemResource'>MSN</div>
+                    </div>
+                    <div className="item">
+                    <img src={example} alt="" />
+                        <div className='itemContent'>
+                            <span>How a visual artist redefines sucess in graphic defign</span>
+                        </div>
+                        <div className='itemResource'>MSN</div>
+                    </div>
+                </Slider></div>,
   },
   {
     key: 2,
@@ -69,6 +107,12 @@ const TrendingTopic = () => {
               expandable={{
                 expandedRowRender: record => <p style={{ margin: 0 }}>{record.description}</p>,
                 rowExpandable: record => record.name !== 'Not Expandable',
+                expandIcon: ({ expanded, onExpand, record }) =>
+                expanded ? (
+                <div className='expand' onClick={e => onExpand(record, e)} />
+                ) : (
+                <div className='fold' onClick={e => onExpand(record, e)} />
+                )
               }}
               dataSource={data}
           />
