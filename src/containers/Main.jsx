@@ -52,12 +52,13 @@ const Main = () => {
           {Logo()}
           Intelligence home
         </div>
-      <div className={`${activeDom === "headlineGenerator" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
-        headlineGeneratorRef.current.scrollIntoView();
-      }}>{Start(activeDom === "headlineGenerator")}Headline generator</div>
       <div className={`${activeDom === "trendingTopicExplorer" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
         trendingTopicExplorerRef.current.scrollIntoView();
-      }}>{Shape(activeDom === "trendingTopicExplorer")}Trending topic explorer</div>
+      }}>{ Start(activeDom === "trendingTopicExplorer")}Trending topic explorer</div>
+      <div className={`${activeDom === "headlineGenerator" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
+        headlineGeneratorRef.current.scrollIntoView();
+      }}>{Shape(activeDom === "headlineGenerator")}Headline generator</div>
+
       <div className={`${activeDom === "videoEditing" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
         videoEditingRef.current.scrollIntoView();
       }}>{ NameCard( activeDom === "videoEditing")} Video editing</div>
@@ -90,13 +91,13 @@ const Main = () => {
           </div>
         </div>
 
-
-        <div id="headlineGenerator" ref={headlineGeneratorRef}>
-          <HeadlineGenerator />
-        </div>
         <div id={"trendingTopicExplorer"} className="trendingTopicExplorer" ref={trendingTopicExplorerRef} style={{width: "100%", height: "900px"}}>
           <TrendingTopic />
         </div>
+        <div id="headlineGenerator" ref={headlineGeneratorRef}>
+          <HeadlineGenerator />
+        </div>
+
         <div id={"videoEditing"} ref={videoEditingRef} className="section-container">
             <ImageSlice/>
         </div>
