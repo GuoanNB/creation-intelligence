@@ -97,7 +97,6 @@ const Main = () => {
         <div id="headlineGenerator" ref={headlineGeneratorRef}>
           <HeadlineGenerator />
         </div>
-
         <div id={"videoEditing"} ref={videoEditingRef} className="section-container">
             <ImageSlice/>
         </div>
