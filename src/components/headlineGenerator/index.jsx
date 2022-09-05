@@ -1,7 +1,7 @@
 import "./index.css"
 import React from "react";
 import { Input, Button, Tooltip, message } from "antd";
-import { arrowGreenSVG, customizeSVG, msnSVG } from "./images/svgIcons";
+import { arrowGreenSVG, customizeSVG, msnSVG } from "../../Icons/svg";
 
 const { TextArea } = Input;
 const HeadlineGenerator = () => {
@@ -17,8 +17,8 @@ const HeadlineGenerator = () => {
     const [url, setUrl] = React.useState("");
     const [subTitle, setSubTitle] = React.useState(subTitleList[0]);
     const [resultBtnName, setResultBtnName] = React.useState("See results");
-    const [customizeSuggestionList, setCustomizeSuggestionList] = React.useState([])
-    const [msnSuggestionList, setMsnSuggestionList] = React.useState([])
+    const [customizeSuggestionList, setCustomizeSuggestionList] = React.useState(["test1", "test2", "test3"])
+    const [msnSuggestionList, setMsnSuggestionList] = React.useState(["test11", "test22", "test33"])
     const [sampleContentIndex, setSampleContentIndex] = React.useState(0)
 
     React.useMemo(() => {
@@ -124,11 +124,11 @@ const HeadlineGenerator = () => {
                         <div className="original-headline normal-font">Original headline</div>
                         <div className="original-title normal-font">Global energy transition: three trillion for economy and climate</div>
                     </div>
-                    <img src={require("./images/headline.png")} alt="" />
+                    <img src={require("../../images/headline.png")} alt="" />
                 </div>
                 <div className="suggestion msn-suggestion">
                     <div className="suggestion-title normal-title normal-font">{suggestionTitle}</div>
-                    {customizeSuggestionList.map((val, index) => {
+                    {msnSuggestionList.map((val, index) => {
                         return <div key={val + index} className={`list-item${index === customizeSuggestionList.length - 1 ? "" : " border-bottom"}`}>
                             <div id={`msn-item${index}`}>{val}</div>
                             <div className="flex-container">
@@ -150,7 +150,7 @@ const HeadlineGenerator = () => {
     }
     return (
         <>
-            <img src={require("./images/headline.png")} alt=""></img>
+            <img src={require("../../images/headline.png")} alt=""></img>
             <div className="title normal-font align-center">{title}​</div>
             <div className="description normal-font align-center">
                 <span>{description}</span>
