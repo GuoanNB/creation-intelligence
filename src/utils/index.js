@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useEffect, useState, useCallback } from 'react'
 
 const baseUrl = "https://intelligencedemo.azurewebsites.net"
 export const getSuggestionTitle = (data = {}) => {
@@ -10,10 +11,8 @@ export const getSuggestionTitle = (data = {}) => {
 }
 
 export const getTredingTopics = (data = {}) => {
-    return axios({
-        method: "get",
-        url: `${baseUrl}/api/TrendTopic?code=JOxznCL1isopyfZnUCgYrtD7H79Qe_58rBeS5XctdL6PAzFu_yjkNw==&date=2022-09-05&vertical=All`,
-        data,
+    return axios.get(`${baseUrl}/api/TrendTopic?code=JOxznCL1isopyfZnUCgYrtD7H79Qe_58rBeS5XctdL6PAzFu_yjkNw==`, {
+        params: data,
     })
 }
 
@@ -45,7 +44,23 @@ const getFormatDay = (num) => {
     }
     return { yDate, displayDate }
 }
+export const useSyncCallback = callback => {
+    const [proxyState, setProxyState] = useState({ current: false })
 
+    const Func = useCallback(() => {
+        setProxyState({ current: true })
+    }, [proxyState])
+
+    useEffect(() => {
+        if (proxyState.current === true) setProxyState({ current: false })
+    }, [proxyState])
+
+    useEffect(() => {
+        proxyState.current && callback()
+    })
+
+    return Func
+}
 export const tableData = [
     {
         "Topic": "Family Day",

@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 84px;
 }
 .trendingTopicExplorer {
     display: flex;
@@ -53,10 +54,12 @@
     font-size: 14px;
     font-weight: 400;
     color: #1A1A1A;
-    border-width: 1px;
-    border-style: solid;
-    border-color:#B3450A;
+    border: 1px solid transparent;
     border-radius: 8px;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(to right, #fff, #fff), linear-gradient(to right, #F4A628, #A829FE);
+    background-size: 100% 100%;
     padding: 2px 14px;
     margin-bottom: 40px;
     width: 655px;

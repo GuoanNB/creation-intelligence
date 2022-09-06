@@ -40,7 +40,6 @@ export default class Slider extends React.Component {
     }
 
     needShowPrevOrNext() {
-        console.log("needShowPrevOrNext", this.wrapperRef.current.offsetWidth, this.scrollerRef.current.offsetWidth, this.wrapperRef, this.scrollerRef);
         return !(this.wrapperRef.current.offsetWidth > this.scrollerRef.current.offsetWidth);
     }
 

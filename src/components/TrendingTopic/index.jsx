@@ -10,7 +10,7 @@ import Saturated from '../../images/Saturated.png';
 import downArrow from '../../images/down-arrow.png';
 import down from '../../images/down.png';
 import parallel from '../../images/parallel.png';
-import { getRecently7days, getTredingTopics, tableData } from '../../utils';
+import { getRecently7days, getTredingTopics, tableData, useSyncCallback } from '../../utils';
 import classNames from 'classnames';
 const days = getRecently7days();
 const verticals = ['All', 'News', 'Finace', 'Sports', 'Entertainment', 'Others'];
@@ -51,17 +51,22 @@ const TrendingTopic = () => {
     const [ dataActiveIndex, setDateActiveIndex ] = React.useState(0);
     const [ verticalActiveIndex, setVerticalActiveIndex ] = React.useState(0);
     const [ trendTopic, setTrendTopic] = React.useState([]);
+    const [loading, setLoading ] = React.useState(false);
     const dateClick = (index) => {
-        setDateActiveIndex(index)
+        setDateActiveIndex(index);
+        getRealTableData();
     } 
     const verticalClick = (index) => {
-        setVerticalActiveIndex(index)
+        setVerticalActiveIndex(index);
+        getRealTableData();
     }
     const openDoc = (link) => {
         window.open(link);
+        getRealTableData();
     }
-    React.useEffect(() => {
-        const trendTopic = tableData.map((item, index) => {
+    // transfer interface data to coloumn data
+    const revertData = (arr) => {
+        return arr.map((item, index) => {
             return {
                 key: index+1,
                 topic: <div className={'number'+(index+1)}><span>#{index+1}</span>{item.Topic}</div>,
@@ -87,14 +92,23 @@ const TrendingTopic = () => {
                 </div>,
             }
         })
-        setTrendTopic(trendTopic);
+    }
+    const getRealTableData = useSyncCallback(() => {
         getTredingTopics({
-            date: '2022-09-05',
-            vertical: 'All'
+            date: days[dataActiveIndex].yDate,
+            vertical: verticals[verticalActiveIndex]
         }).then((json)=> {
-            console.log('JSON', json)
+            revertData(tableData);
+            setLoading(false);
         })
-    }, [])
+    })
+
+    React.useEffect(() => {
+        const trendTopic = revertData(tableData);
+        setTrendTopic(trendTopic);
+        getRealTableData();
+    }, []);
+
     return (
       <div className="trendContainer">
         <div className="trendingTitle">
@@ -107,7 +121,7 @@ const TrendingTopic = () => {
           By inspecting and analyzing current focuses of users, we associate the reading demands with relevant hot topics and recommend suitable ones for creation to users. Daily update on 10+ categories of latest hottest industry clues. Suitable scenarios: hot topic finding, idea inspiration.
         </div>
         <div className='trafficBoost'>
-            <span className='trafficNumber'>26%</span>
+            <span className='trafficNumber'>28%</span>
             <span className='trafficContent'>trending topic related contents get traffic boost after new trending occurs in recent 30 days</span>
         </div>
         <div className="filter">
@@ -133,6 +147,7 @@ const TrendingTopic = () => {
           <Table
               pagination={false}
               columns={columns}
+              loading={loading}
               expandable={{
                 expandedRowRender: record => <p style={{ margin: 0 }}>{record.description}</p>,
                 rowExpandable: record => record.name !== 'Not Expandable',
