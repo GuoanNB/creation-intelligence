@@ -154,7 +154,7 @@ const HeadlineGenerator = () => {
             <div className="title normal-font align-center">{title}​</div>
             <div className="description normal-font align-center">
                 <span>{description}</span>
-                <a href="#/" target="_blank">Headline optimization records</a>
+                <a href="/tops" target="_blank">Headline optimization records</a>
             </div>
             <TabBar tabIndex={tabIndex} />
             <div className="sub-title normal-title normal-font">{subTitle}</div>
