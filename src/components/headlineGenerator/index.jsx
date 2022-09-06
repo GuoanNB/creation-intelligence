@@ -149,7 +149,7 @@ const HeadlineGenerator = () => {
     }
     return (
         <>
-            <img src={require("../../images/headline.png")} alt=""></img>
+            <div className="headline-title">Headline generator</div>
             <div className="title normal-font align-center">{title}​</div>
             <div className="description normal-font align-center">
                 <span>{description}</span>

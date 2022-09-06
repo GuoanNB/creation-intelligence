@@ -99,10 +99,10 @@ const Main = () => {
           </div>
         </div>
 
-        <div id={"trendingTopicExplorer"} className="trendingTopicExplorer" ref={trendingTopicExplorerRef} style={{width: "100%", height: "900px"}}>
+        <div id={"trendingTopicExplorer"} className="section-container trendingTopicExplorer" ref={trendingTopicExplorerRef}>
           <TrendingTopic />
         </div>
-        <div id="headlineGenerator" ref={headlineGeneratorRef}>
+        <div id="headlineGenerator" ref={headlineGeneratorRef} className="section-container">
           <HeadlineGenerator />
         </div>
         <div id={"videoEditing"} ref={videoEditingRef} className="section-container">

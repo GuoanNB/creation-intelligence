@@ -23,6 +23,17 @@ div {
     line-height: 34px;
     color: #1A1A1A;
 }
+.headline-title{
+    background-image: radial-gradient( #FD7C2A, #00E2C8, #F4A628, #00E2C8, #A829FE);
+    color :transparent; 
+    background-clip:text;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 13px;
+}
 .description {
     width: 900px;
     margin: 35px auto 23px;
