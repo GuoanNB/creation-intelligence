@@ -16,6 +16,9 @@ div {
 .align-center {
     text-align: center;
 }
+.title-img {
+    margin-top: 120px;
+}
 .title {
     margin-top: 13px;
     font-weight: 600;
@@ -48,12 +51,6 @@ div {
 .suggestion-title {
     margin-bottom: 8px;
 }
-#text-area {
-    width: 900px;
-    height: 300px;
-    margin: 0 auto;
-    border-radius: 4px;
-}
 .words-number {
     width: 900px;
     margin: 4px auto 0;
@@ -66,17 +63,29 @@ div {
     margin: 8px auto 0;
     justify-content: flex-end;
 }
-.btn {
+#text-area {
+    width: 900px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+#sample-btn {
+    height: 42px;
     border-radius: 4px;
     padding: 0 10px;
 }
-.customize-btn {
+#primary-btn {
     height: 42px;
-}
-.primary-btn {
+    border-radius: 4px;
+    padding: 0 10px;
     background-color: #036AC4;
 }
-.input {
+#import-btn {
+    border-radius: 4px;
+    padding: 0 10px;
+    background-color: #036AC4;
+}
+#input {
     width: 778px;
     margin-right: 8px;
     border-radius: 4px;
