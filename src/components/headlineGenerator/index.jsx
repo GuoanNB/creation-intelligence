@@ -6,19 +6,20 @@ import { getSuggestionTitle } from "../../utils/index";
 import TabBar from "./TabBar";
 
 const { TextArea } = Input;
-let sampleContentIndex = 0;
+
 const title = "Generate compelling headline for your article";
 const suggestionTitle = "Headline suggestions"
 const description = "The headline suggestion model is built on learning of massive high-quality contents, it analyzes the articles from creators and automatically suggests compelling titles which helps creators to improve article quality and its further performance. Usage scenarios: headline suggestion, creation assistant. "
 const subTitleList = ["Enter message or use sample content", "MSN content URL"]
 const sampleContentList = ["123", "456"]
+let sampleContentIndex = 0;
+let subTitle = subTitleList[0]
 
 const HeadlineGenerator = () => {
     const [tabIndex, setTabIndex] = React.useState(0);
     const [words, setWords] = React.useState("");
     const [wordsNumber, setWordsNumber] = React.useState(0);
     const [url, setUrl] = React.useState("");
-    const [subTitle, setSubTitle] = React.useState(subTitleList[0]);
     const [resultBtnName, setResultBtnName] = React.useState("See results");
     const [customizeSuggestionList, setCustomizeSuggestionList] = React.useState(["test1", "test2", "test3"])
     const [msnSuggestionList, setMsnSuggestionList] = React.useState(["test11", "test22", "test33"])
@@ -31,7 +32,7 @@ const HeadlineGenerator = () => {
 
     const handleTabChange = (index) => {
         setTabIndex(index)
-        setSubTitle(subTitleList[index])
+        subTitle = subTitleList[index]
     }
     const onSampleContent= () => {
         setWords(sampleContentList[sampleContentIndex])
