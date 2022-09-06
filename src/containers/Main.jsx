@@ -70,24 +70,32 @@ const Main = () => {
           </div>
           <div className="Page-top-sub-title">Microsoft intelligence home helps users to create content and advertise.</div>
           <div className="Page-top-cubes-container">
-            <div className="Page-top-cube" onClick={() => {
-              headlineGeneratorRef.current.scrollIntoView();
-            }}>
-            <div>{Start(false, 40)}</div>
-            Trending topic explorer
-            </div>
-            <div className="Page-top-cube" onClick={() => {
-              trendingTopicExplorerRef.current.scrollIntoView();
-            }}>
-            <div>{Shape(false, 40)}</div>
-            Headline generator
-            </div>
-            <div className="Page-top-cube"  onClick={() => {
-              videoEditingRef.current.scrollIntoView();
-            }}>
-            <div>{NameCard(false, 40)}</div>
-            Video editing
-            </div>
+            {/* <div  className="Page-top-cube-border"> */}
+              <div className="Page-top-cube" onClick={() => {
+                headlineGeneratorRef.current.scrollIntoView();
+              }}>
+              <div>{Start(false, 40)}</div>
+              Trending topic explorer
+              </div>
+            {/* </div> */}
+
+            {/* <div className="Page-top-cube-border"> */}
+                <div className="Page-top-cube" onClick={() => {
+                  trendingTopicExplorerRef.current.scrollIntoView();
+                }}>
+                  <div>{Shape(false, 40)}</div>
+                  Headline generator
+                </div>
+            {/* </div> */}
+            {/* <div  className="Page-top-cube-border"> */}
+                <div className="Page-top-cube"  onClick={() => {
+                  videoEditingRef.current.scrollIntoView();
+                }}>
+                <div>{NameCard(false, 40)}</div>
+                Video editing
+                </div>
+            {/* </div> */}
+
           </div>
         </div>
 
@@ -98,7 +106,7 @@ const Main = () => {
           <HeadlineGenerator />
         </div>
         <div id={"videoEditing"} ref={videoEditingRef} className="section-container">
-            <ImageSlice/>
+          <ImageSlice/>
         </div>
       </div>
     </div>
