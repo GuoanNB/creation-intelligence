@@ -1,10 +1,10 @@
 import './index.css';
 import React from 'react';
 import { Logo, Start, Shape, NameCard } from './assets';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import ImageSlice from "../components/ImageSlice";
 import TrendingTopic from "../components/TrendingTopic";
-import HeadlineGenerator from "../components/HeadlineGenerator";
+import HeadlineGenerator from "../components/headlineGenerator";
 
 const Main = () => {
   const trendingTopicExplorerRef = React.useRef(null);
