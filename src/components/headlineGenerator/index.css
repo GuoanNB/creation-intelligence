@@ -48,26 +48,22 @@ div {
 .suggestion-title {
     margin-bottom: 8px;
 }
-.area-container {
-    position: relative;
+#text-area {
     width: 900px;
-    margin: auto;
-}
-.text-area {
-    border-radius: 4px; 
-    position: relative;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 4px;
 }
 .words-number {
-    position: absolute;
-    z-index: 500;
-    right: 10px;
-    bottom: 6px;
+    width: 900px;
+    margin: 4px auto 0;
+    text-align: end;
 }
 .btns {
     width: 900px;
     display: flex;
     gap: 10px;
-    margin: 12px auto 0;
+    margin: 8px auto 0;
     justify-content: flex-end;
 }
 .btn {
