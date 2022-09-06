@@ -21,8 +21,8 @@ const HeadlineGenerator = () => {
     const [wordsNumber, setWordsNumber] = React.useState(0);
     const [url, setUrl] = React.useState("");
     const [resultBtnName, setResultBtnName] = React.useState("See results");
-    const [customizeSuggestionList, setCustomizeSuggestionList] = React.useState(["test1", "test2", "test3"])
-    const [msnSuggestionList, setMsnSuggestionList] = React.useState(["test11", "test22", "test33"])
+    const [customizeSuggestionList, setCustomizeSuggestionList] = React.useState(["test1fewafefewafewfewfawefweafewafewfhwehfe fawefhewf afewafwefwaefehwkfhek faewfhewhfkwehfewkfawe fafewafew awefewafewafewafewf afewf", "test2", "test3"])
+    const [msnSuggestionList, setMsnSuggestionList] = React.useState(["test11 test1fewafefewafewfewfawefweafewafewfhwehfe test1fewafefewafewfewfawefweafewafewfhwehfe test1fewafefewafewfewfawefweafewafewfhwehfe", "test22", "test33"])
 
     React.useMemo(() => {
         const numberList = words.trim().split(/\s+/g)
@@ -99,7 +99,7 @@ const HeadlineGenerator = () => {
                 <div className="suggestion-title normal-title normal-font">{suggestionTitle}</div>
                 {customizeSuggestionList.map((val, index) => {
                     return <div key={val + index} className={`list-item${index === customizeSuggestionList.length - 1 ? "" : " border-bottom"}`}>
-                        <span id={`customize-item${index}`}>{val}</span>
+                        <span id={`customize-item${index}`} className="customize-title ellipsis-title">{val}</span>
                         <Tooltip title="copied!" trigger="click" placement="bottom">
                             <svg className="copy" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => onCopy(`customize-item${index}`)}>
                                 <path d="M4 0C2.89543 0 2 0.895431 2 2V12C2 13.1046 2.89543 14 4 14H10C11.1046 14 12 13.1046 12 12V2C12 0.89543 11.1046 0 10 0H4ZM3 2C3 1.44772 3.44772 1 4 1H10C10.5523 1 11 1.44772 11 2V12C11 12.5523 10.5523 13 10 13H4C3.44772 13 3 12.5523 3 12V2ZM0 4.00001C0 3.25973 0.402199 2.61339 1 2.26758V12.5C1 13.8807 2.11929 15 3.5 15H9.73244C9.38663 15.5978 8.74028 16 8 16H3.5C1.567 16 0 14.433 0 12.5V4.00001Z" fill="#717171"/>
@@ -125,7 +125,7 @@ const HeadlineGenerator = () => {
                     <div className="suggestion-title normal-title normal-font">{suggestionTitle}</div>
                     {msnSuggestionList.map((val, index) => {
                         return <div key={val + index} className={`list-item${index === customizeSuggestionList.length - 1 ? "" : " border-bottom"}`}>
-                            <div id={`msn-item${index}`}>{val}</div>
+                            <span id={`msn-item${index}`} className="msn-title ellipsis-title">{val}</span>
                             <div className="flex-container">
                                 <div className="number-container">
                                     {arrowGreenSVG()}

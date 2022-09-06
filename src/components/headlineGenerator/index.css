@@ -156,3 +156,14 @@ div {
 .number-container >span {
     color: #0F7B0F;
 }
+.ellipsis-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.customize-title {
+    max-width: 820px;
+}
+.msn-title {
+    max-width: 750px;
+}
