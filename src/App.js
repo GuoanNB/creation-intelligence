@@ -12,9 +12,9 @@ const App = () => {
     <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main />}>
+        <Route path="/hackthon-demo" element={<Main />}>
         </Route>
-        <Route path="/tops" element={<TopTraffic />} />
+        <Route path="/hackthon-demo/tops" element={<TopTraffic />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
