@@ -1,7 +1,9 @@
 import "./index.css"
 import React from "react";
 import { Input, Button, Tooltip, message } from "antd";
-import { arrowGreenSVG, customizeSVG, msnSVG } from "../../Icons/svg";
+import { arrowGreenSVG } from "../../Icons/svg";
+import { getSuggestionTitle } from "../../utils/index";
+import TabBar from "./TabBar";
 
 const { TextArea } = Input;
 const HeadlineGenerator = () => {
@@ -38,26 +40,28 @@ const HeadlineGenerator = () => {
     const onCustomizeConfirm = () => {
         if (wordsNumber <= 200) {
             message.error("At least 200 words are required")
+        } else {
+            getSuggestionTitle({
+                content_type: "text",
+                content: words
+            })
+        }
+    }
+    const onMSNConfirm = () => {
+        if (!/msn\.com/.test(url)) {
+            message.error("Only MSN article is supported for now.")
+        } else {
+            getSuggestionTitle({
+                content_type: "link",
+                content: url
+            })
         }
     }
     const onCopy = (key) => {
         const content = document.getElementById(key).innerText
         navigator.clipboard.writeText(content)
     }
-    const TabBar = ({ tabIndex }) => {
-        return (
-            <div className="tab">
-                <div className={`tab-button${tabIndex === 0 ? " active" : ""}`} onClick={() => handleTabChange(0)}>
-                    {customizeSVG()}
-                    <span className="tab-name">Customized content</span>
-                </div>
-                <div className={`tab-button${tabIndex === 1 ? " active" : ""}`} onClick={() => handleTabChange(1)}>
-                    {msnSVG()}
-                    <span className="tab-name">MSN content</span>
-                </div>
-            </div>
-        )
-    }
+    
     const CustomizeBtns = () => {
         return (
             <div className="btns">
@@ -93,7 +97,7 @@ const HeadlineGenerator = () => {
                     placeholder="Please enter here"
                     onChange={e => setUrl(e.target.value)}
                 />
-                <Button className="btn primary-btn" type="primary">Import content</Button>
+                <Button className="btn primary-btn" type="primary" onClick={onMSNConfirm}>Import content</Button>
             </>
         )
     }
@@ -134,7 +138,7 @@ const HeadlineGenerator = () => {
                             <div className="flex-container">
                                 <div className="number-container">
                                     {arrowGreenSVG()}
-                                    <span className="green-text">19.3%</span>
+                                    <span>19.3%</span>
                                 </div>
                                 <Tooltip title="copied!" trigger="click">
                                     <svg className="copy" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => onCopy(`msn-item${index}`)}>
@@ -156,7 +160,7 @@ const HeadlineGenerator = () => {
                 <span>{description}</span>
                 <a href="#/" target="_blank">Headline optimization records</a>
             </div>
-            <TabBar tabIndex={tabIndex} />
+            <TabBar tabIndex={tabIndex} onChange={handleTabChange} />
             <div className="sub-title normal-title normal-font">{subTitle}</div>
             {tabIndex === 0 ? renderCustomizeContent() : renderMSNContent()}
             {tabIndex === 0 ? renderCustomizeSuggestion() : renderMSNSuggestion()}

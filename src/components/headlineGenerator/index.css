@@ -34,36 +34,6 @@ div {
 .description >a {
     color: #036AC4;
 }
-.tab {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-.tab svg {
-    margin-inline-end: 6px;
-    height: 20px;
-}
-.tab-button {
-    padding: 6px 16px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-.tab-name {
-    font-size: 14px;
-    line-height: 20px;
-}
-.active {
-    position: relative;
-    font-weight: 600;
-    border: 1px solid transparent;
-    border-radius: 16px;
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-    background-image: linear-gradient(to right, #fff, #fff), linear-gradient(to right, #F4A628, #A829FE);
-    background-size: 100% 100%;
-}
 .normal-title {
     color: #1A1A1A;
     text-align: start;
@@ -178,6 +148,6 @@ div {
     gap: 5px;
     margin-right: 38px;
 }
-.green-text {
+.number-container >span {
     color: #0F7B0F;
 }
