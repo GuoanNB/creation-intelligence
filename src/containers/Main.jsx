@@ -1,29 +1,11 @@
 import './index.css';
 import React from 'react';
+import { Logo, Start, Shape, NameCard } from './assets';
+import 'antd/dist/antd.css';
+import ImageSlice from "../components/ImageSlice";
 import TrendingTopic from "../components/TrendingTopic";
+import HeadlineGenerator from "../components/HeadlineGenerator";
 
-const columns = [
-  { title: <div>Topic</div>, dataIndex: 'topic', key: 'topic' },
-  { title: 'Search volume', dataIndex: 'searchVolume', key: 'searchVolume' },
-  { title: 'MSN content supply', dataIndex: 'msn', key: 'msn' }
-];
-
-const data = [
-  {
-    key: 1,
-    topic: <div>Family day</div> ,
-    searchVolume: '300,232',
-    msn: 'Scarce',
-    description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.',
-  },
-  {
-    key: 2,
-    topic: 'Jim Green',
-    searchVolume: '422,333',
-    msn: 'Moderate',
-    description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-  },
-]
 const Main = () => {
   const trendingTopicExplorerRef = React.useRef(null);
   const headlineGeneratorRef = React.useRef(null);
@@ -66,17 +48,58 @@ const Main = () => {
   return (
     <div className="App">
       <header className="App-header">
-      <div className={`${activeDom === "headlineGenerator" ? "Section-title Active-ection-title" : "Section-title"}`}>Headline generator</div>
-      <div className={`${activeDom === "trendingTopicExplorer" ? "Section-title Active-ection-title" : "Section-title"}`}>Trending topic explorer</div>
-      <div className={`${activeDom === "videoEditing" ? "Section-title Active-ection-title" : "Section-title"}`}>Video editing</div>
+        <div className="App-logo">
+          {Logo()}
+          Intelligence home
+        </div>
+      <div className={`${activeDom === "trendingTopicExplorer" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
+        trendingTopicExplorerRef.current.scrollIntoView();
+      }}>{ Start(activeDom === "trendingTopicExplorer")}Trending topic explorer</div>
+      <div className={`${activeDom === "headlineGenerator" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
+        headlineGeneratorRef.current.scrollIntoView();
+      }}>{Shape(activeDom === "headlineGenerator")}Headline generator</div>
+
+      <div className={`${activeDom === "videoEditing" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
+        videoEditingRef.current.scrollIntoView();
+      }}>{ NameCard( activeDom === "videoEditing")} Video editing</div>
       </header>
       <div className="App-Container">
-        <div id={"headlineGenerator"} ref={headlineGeneratorRef} style={{width: "100%", height: "900px", background: "green"}}></div>
+        <div className="Page-top-area-container">
+          <div className="Page-top-area-title">
+          Intelligence empowers creators
+          </div>
+          <div className="Page-top-sub-title">Microsoft intelligence home helps users to create content and advertise.</div>
+          <div className="Page-top-cubes-container">
+            <div className="Page-top-cube" onClick={() => {
+              headlineGeneratorRef.current.scrollIntoView();
+            }}>
+            <div>{Start(false, 40)}</div>
+            Trending topic explorer
+            </div>
+            <div className="Page-top-cube" onClick={() => {
+              trendingTopicExplorerRef.current.scrollIntoView();
+            }}>
+            <div>{Shape(false, 40)}</div>
+            Headline generator
+            </div>
+            <div className="Page-top-cube"  onClick={() => {
+              videoEditingRef.current.scrollIntoView();
+            }}>
+            <div>{NameCard(false, 40)}</div>
+            Video editing
+            </div>
+          </div>
+        </div>
+
         <div id={"trendingTopicExplorer"} className="trendingTopicExplorer" ref={trendingTopicExplorerRef} style={{width: "100%", height: "900px"}}>
           <TrendingTopic />
         </div>
-        
-        <div id={"videoEditing"} ref={videoEditingRef} style={{width: "100%", height: "900px", background: "blue"}}></div>
+        <div id="headlineGenerator" ref={headlineGeneratorRef}>
+          <HeadlineGenerator />
+        </div>
+        <div id={"videoEditing"} ref={videoEditingRef} className="section-container">
+            <ImageSlice/>
+        </div>
       </div>
     </div>
   );

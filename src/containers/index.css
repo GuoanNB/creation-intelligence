@@ -5,20 +5,107 @@
     display: flex;
     flex-direction: column;
   }
-  
+
+  .Page-top-area-container{
+    width: 100vw;
+    height: 516px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../public/TopBackImg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 113px;
+  }
+
+  .Page-top-area-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    background-image: linear-gradient(to right,  #F4A628,  #FD7C2A, #c9662d,#ffe601, #15e6a7, #00E2C8, #00E2C8);
+    color :transparent; 
+    background-clip:text;
+    margin-bottom: 30px;
+  }
+
+  .Page-top-sub-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 58px;
+  }
+
+  .Page-top-cubes-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 746px;
+    cursor: pointer;
+  }
+
+  .Page-top-cube{
+    width: 240px;
+    height: 132px;
+    background: rgba(255, 255, 255, 0.2);
+    padding-top: 28px;
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
       animation: App-logo-spin infinite 20s linear;
     }
+  }
+  .section-container {
+      width: 100%;
+      height: auto;
+
   }
   .Section-title {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     color: #fff;
+    margin: 0 20px;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
-  .Active-ection-title {
-    color: blue;
+  .Active-section-title {
+    background-image: linear-gradient(to right,  #F4A628, #A829FE, #FD7C2A, #00E2C8, #F4A628, #00E2C8);
+    color :transparent; 
+    background-clip:text;
+    position: relative;
+  }
+  .Active-section-title::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to right, #F4A628, #FD7C2A, #00E2C8, #F4A628);
+    position: absolute;
+    border-radius: 20px;
   }
   .App-header {
     background-color: #000000;
@@ -26,10 +113,33 @@
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    position: relative;
+
   }
+  .App-logo{
+    position: absolute;
+    left: 18px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  .App-logo > svg {
+    position: relative;
+    top: 1px;
+    margin-right: 10px;
+  }
+
+
+
   .App-Container {
     flex: 1;
     width: 100vw;

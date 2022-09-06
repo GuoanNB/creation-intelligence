@@ -17,7 +17,12 @@
   line-height: 20px;
   color: #fff;
 }
-.Active-ection-title {
+
+.Section-title > svg {
+  margin-right: 6px;
+}
+
+.Active-section-title {
   color: blue;
 }
 .App-header {
