@@ -141,6 +141,7 @@
     background: #FAFAFA;
     border-radius: 100px;
     padding: 4px 14px;
+    cursor: pointer;
 }
 .data {
     margin-bottom: 10px;

@@ -9,12 +9,16 @@ import raise from '../../images/raise.png';
 import Moderate from '../../images/Moderate.png'
 import Saturated from '../../images/Saturated.png'
 import downArrow from '../../images/down-arrow.png'
+import { getRecently7days } from '../../utils';
+import classNames from 'classnames';
+const days = getRecently7days();
+const verticals = ['All', 'News', 'Finace', 'Sports', 'Technology'];
+
 const columns = [
   { title: <div>Topic</div>, dataIndex: 'topic', key: 'topic' },
   { title: <div className='searchVolume'>Search volume <img src={downArrow} alt="down-arrow" /></div>, dataIndex: 'searchVolume', key: 'searchVolume' },
   { title: 'MSN content supply', dataIndex: 'msn', key: 'msn' }
 ];
-
 const data = [
   {
     key: 1,
@@ -83,8 +87,15 @@ const data = [
   },
 ]
 const TrendingTopic = () => {
-  // console.log("activeSection", activeSection)
-  return (
+    const [ dataActiveIndex, setDateActiveIndex ] = React.useState(0);
+    const [ verticalActiveIndex, setVerticalActiveIndex ] = React.useState(0);
+    const dateClick = (index) => {
+        setDateActiveIndex(index)
+    } 
+    const verticalClick = (index) => {
+        setVerticalActiveIndex(index)
+    } 
+    return (
       <div className="trendContainer">
         <div className="trendingTitle">
             Trending topic explorer
@@ -102,21 +113,19 @@ const TrendingTopic = () => {
         <div className="filter">
             <div className="data">
               <span className='filterTitle'>Date:</span>
-              <span className='selected'>Today</span>
-              <span>Yesterday</span>
-              <span>8/19</span>
-              <span>8/18</span>
-              <span>8/17</span>
-              <span>8/16</span>
-              <span>8/15</span>
+              {days.map((item, index) => {
+                return <span className={classNames({ 'selected': dataActiveIndex === index})} onClick={() => dateClick(index)}>
+                            {days[index].displayDate}
+                        </span>
+              })}
             </div>
             <div className="Vertical">
               <span className='filterTitle'>Vertical:</span>
-              <span className='selected'>All</span>
-              <span>News</span>
-              <span>Finace</span>
-              <span>Sports</span>
-              <span>Technology</span>
+              {verticals.map((item, index) => {
+                return <span className={classNames({ 'selected': verticalActiveIndex === index})} onClick={() => verticalClick(index)}>
+                            {item}
+                        </span>
+              })}
             </div>
         </div>
         <div className="displayContent">
