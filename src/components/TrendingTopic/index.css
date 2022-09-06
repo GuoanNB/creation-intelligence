@@ -2,6 +2,8 @@
 .trendContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .trendingTopicExplorer {
     display: flex;
@@ -57,6 +59,7 @@
     border-radius: 8px;
     padding: 2px 14px;
     margin-bottom: 40px;
+    width: 655px;
 }
 .box {
     border-radius: 8px;
