@@ -4,7 +4,7 @@ import { Logo, Start, Shape, NameCard } from './assets';
 import 'antd/dist/antd.min.css';
 import ImageSlice from "../components/ImageSlice";
 import TrendingTopic from "../components/TrendingTopic";
-import HeadlineGenerator from "../components/headlineGenerator";
+import HeadlineGenerator from "../components/HeadlineGenerator";
 
 const Main = () => {
   const trendingTopicExplorerRef = React.useRef(null);
@@ -106,7 +106,7 @@ const Main = () => {
           <HeadlineGenerator />
         </div>
         <div id={"videoEditing"} ref={videoEditingRef} className="section-container">
-            <ImageSlice/>
+          <ImageSlice/>
         </div>
       </div>
     </div>
