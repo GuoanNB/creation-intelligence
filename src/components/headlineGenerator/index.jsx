@@ -61,7 +61,6 @@ const HeadlineGenerator = () => {
         const content = document.getElementById(key).innerText
         navigator.clipboard.writeText(content)
     }
-    
     const CustomizeBtns = () => {
         return (
             <div className="btns">
@@ -73,17 +72,13 @@ const HeadlineGenerator = () => {
     const renderCustomizeContent = () => {
         return (
             <>
-                <div className="area-container">
-                    <TextArea
-                        allowClear
-                        autoSize={{ minRows: 10, maxRows: 10 }}
-                        className="text-area"
-                        value={words}
-                        placeholder="200 words minimal is required for better effects"
-                        onChange={e => setWords(e.target.value)}
-                    />
-                    <span className="words-number">{wordsNumber}</span>
-                </div>
+                <TextArea
+                    id="text-area"
+                    value={words}
+                    placeholder="200 words minimal is required for better effects"
+                    onChange={e => setWords(e.target.value)}
+                />
+                <div className="words-number">{wordsNumber}</div>
                 <CustomizeBtns />
             </>
         )
@@ -109,7 +104,7 @@ const HeadlineGenerator = () => {
                 {customizeSuggestionList.map((val, index) => {
                     return <div key={val + index} className={`list-item${index === customizeSuggestionList.length - 1 ? "" : " border-bottom"}`}>
                         <span id={`customize-item${index}`}>{val}</span>
-                        <Tooltip title="copied!" trigger="click">
+                        <Tooltip title="copied!" trigger="click" placement="bottom">
                             <svg className="copy" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => onCopy(`customize-item${index}`)}>
                                 <path d="M4 0C2.89543 0 2 0.895431 2 2V12C2 13.1046 2.89543 14 4 14H10C11.1046 14 12 13.1046 12 12V2C12 0.89543 11.1046 0 10 0H4ZM3 2C3 1.44772 3.44772 1 4 1H10C10.5523 1 11 1.44772 11 2V12C11 12.5523 10.5523 13 10 13H4C3.44772 13 3 12.5523 3 12V2ZM0 4.00001C0 3.25973 0.402199 2.61339 1 2.26758V12.5C1 13.8807 2.11929 15 3.5 15H9.73244C9.38663 15.5978 8.74028 16 8 16H3.5C1.567 16 0 14.433 0 12.5V4.00001Z" fill="#717171"/>
                             </svg>
@@ -140,7 +135,7 @@ const HeadlineGenerator = () => {
                                     {arrowGreenSVG()}
                                     <span>19.3%</span>
                                 </div>
-                                <Tooltip title="copied!" trigger="click">
+                                <Tooltip title="copied!" trigger="click" placement="bottom">
                                     <svg className="copy" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => onCopy(`msn-item${index}`)}>
                                         <path d="M4 0C2.89543 0 2 0.895431 2 2V12C2 13.1046 2.89543 14 4 14H10C11.1046 14 12 13.1046 12 12V2C12 0.89543 11.1046 0 10 0H4ZM3 2C3 1.44772 3.44772 1 4 1H10C10.5523 1 11 1.44772 11 2V12C11 12.5523 10.5523 13 10 13H4C3.44772 13 3 12.5523 3 12V2ZM0 4.00001C0 3.25973 0.402199 2.61339 1 2.26758V12.5C1 13.8807 2.11929 15 3.5 15H9.73244C9.38663 15.5978 8.74028 16 8 16H3.5C1.567 16 0 14.433 0 12.5V4.00001Z" fill="#717171"/>
                                     </svg>
