@@ -6,13 +6,14 @@ import { getSuggestionTitle } from "../../utils/index";
 import TabBar from "./TabBar";
 
 const { TextArea } = Input;
-const HeadlineGenerator = () => {
-    const title = "Generate compelling headline for your article";
-    const suggestionTitle = "Headline suggestions"
-    const description = "The headline suggestion model is built on learning of massive high-quality contents, it analyzes the articles from creators and automatically suggests compelling titles which helps creators to improve article quality and its further performance. Usage scenarios: headline suggestion, creation assistant. "
-    const subTitleList = ["Enter message or use sample content", "MSN content URL"]
-    const sampleContentList = ["123", "456"]
+let sampleContentIndex = 0;
+const title = "Generate compelling headline for your article";
+const suggestionTitle = "Headline suggestions"
+const description = "The headline suggestion model is built on learning of massive high-quality contents, it analyzes the articles from creators and automatically suggests compelling titles which helps creators to improve article quality and its further performance. Usage scenarios: headline suggestion, creation assistant. "
+const subTitleList = ["Enter message or use sample content", "MSN content URL"]
+const sampleContentList = ["123", "456"]
 
+const HeadlineGenerator = () => {
     const [tabIndex, setTabIndex] = React.useState(0);
     const [words, setWords] = React.useState("");
     const [wordsNumber, setWordsNumber] = React.useState(0);
@@ -21,7 +22,6 @@ const HeadlineGenerator = () => {
     const [resultBtnName, setResultBtnName] = React.useState("See results");
     const [customizeSuggestionList, setCustomizeSuggestionList] = React.useState(["test1", "test2", "test3"])
     const [msnSuggestionList, setMsnSuggestionList] = React.useState(["test11", "test22", "test33"])
-    const [sampleContentIndex, setSampleContentIndex] = React.useState(0)
 
     React.useMemo(() => {
         const numberList = words.trim().split(/\s+/g)
@@ -35,7 +35,7 @@ const HeadlineGenerator = () => {
     }
     const onSampleContent= () => {
         setWords(sampleContentList[sampleContentIndex])
-        setSampleContentIndex(sampleContentIndex >= sampleContentList.length - 1 ? 0 : sampleContentIndex + 1)
+        sampleContentIndex = sampleContentIndex >= sampleContentList.length - 1 ? 0 : sampleContentIndex + 1
     }
     const onCustomizeConfirm = () => {
         if (wordsNumber <= 200) {
@@ -61,14 +61,6 @@ const HeadlineGenerator = () => {
         const content = document.getElementById(key).innerText
         navigator.clipboard.writeText(content)
     }
-    const CustomizeBtns = () => {
-        return (
-            <div className="btns">
-                <Button className="btn customize-btn" onClick={onSampleContent}>Sample content</Button>
-                <Button className="btn customize-btn primary-btn" type="primary" onClick={onCustomizeConfirm}>{resultBtnName}</Button>
-            </div>
-        )
-    }
     const renderCustomizeContent = () => {
         return (
             <>
@@ -79,7 +71,10 @@ const HeadlineGenerator = () => {
                     onChange={e => setWords(e.target.value)}
                 />
                 <div className="words-number">{wordsNumber}</div>
-                <CustomizeBtns />
+                <div className="btns">
+                    <Button id="sample-btn" onClick={onSampleContent}>Sample content</Button>
+                    <Button id="primary-btn" type="primary" onClick={onCustomizeConfirm}>{resultBtnName}</Button>
+                </div>
             </>
         )
     }
@@ -87,12 +82,12 @@ const HeadlineGenerator = () => {
         return (
             <>
                 <Input
-                    className="input"
+                    id="input"
                     value={url}
                     placeholder="Please enter here"
                     onChange={e => setUrl(e.target.value)}
                 />
-                <Button className="btn primary-btn" type="primary" onClick={onMSNConfirm}>Import content</Button>
+                <Button id="import-btn" type="primary" onClick={onMSNConfirm}>Import content</Button>
             </>
         )
     }
@@ -149,7 +144,7 @@ const HeadlineGenerator = () => {
     }
     return (
         <>
-            <img src={require("../../images/headline.png")} alt=""></img>
+            <img className="title-img" src={require("../../images/headline.png")} alt=""></img>
             <div className="title normal-font align-center">{title}​</div>
             <div className="description normal-font align-center">
                 <span>{description}</span>
