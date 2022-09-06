@@ -9,6 +9,14 @@ export const getSuggestionTitle = (data = {}) => {
     })
 }
 
+export const getTredingTopics = (data = {}) => {
+    return axios({
+        method: "get",
+        url: `${baseUrl}/api/TrendTopic?code=JOxznCL1isopyfZnUCgYrtD7H79Qe_58rBeS5XctdL6PAzFu_yjkNw==&date=2022-09-05&vertical=All`,
+        data,
+    })
+}
+
 export const getRecently7days = () => {
     let days = [];
     for(let i = 0; i < 7; i++) {
@@ -37,3 +45,88 @@ const getFormatDay = (num) => {
     }
     return { yDate, displayDate }
 }
+
+export const tableData = [
+    {
+        "Topic": "Family Day",
+        "SearchVolumn": {
+            "Score": 600000,
+            "Signal": "Up" //Enum: Up, Down, New, None
+        },
+        "MsnContentSupply": "Scarce", // Enum: Scarce, Moderate, Sarurated
+        "Items": [{
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },
+        {
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },
+        {
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },{
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },
+        {
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        }
+    ]
+    },
+    {
+        "Topic": "US President Election Donald Trump lose",
+        "SearchVolumn": {
+            "Score": 513103,
+            "Signal": "New" //Enum: Up, Down, New, None
+        },
+        "MsnContentSupply": "Moderate", // Enum: Scarce, Moderate, Sarurated
+        "Items": [
+            {
+                "Title": "How to Write Content About Your Photographs",
+                "Source": "MSN",
+                "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+                "DocLink": "https://www.baidu.com"
+            },
+            {
+                "Title": "How to Write Content About Your Photographs",
+                "Source": "MSN",
+                "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+                "DocLink": "https://www.baidu.com"
+            }
+    ]
+    },
+    {
+        "Topic": "US President Election Donald Trump lose",
+        "SearchVolumn": {
+            "Score": 513103,
+            "Signal": "Down" //Enum: Up, Down, New, None
+        },
+        "MsnContentSupply": "Saturated", // Enum: Scarce, Moderate, Sarurated
+        "Items": [
+            {
+                "Title": "How to Write Content About Your Photographs",
+                "Source": "MSN",
+                "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+                "DocLink": "https://www.baidu.com"
+            },
+            {
+                "Title": "How to Write Content About Your Photographs",
+                "Source": "MSN",
+                "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+                "DocLink": "https://www.baidu.com"
+            }
+    ]
+    }
+]

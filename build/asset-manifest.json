@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/hackthon-demo/static/css/main.abb24ba1.css",
-    "main.js": "/hackthon-demo/static/js/main.dbedb1fa.js",
+    "main.css": "/hackthon-demo/static/css/main.37c5662b.css",
+    "main.js": "/hackthon-demo/static/js/main.f06c8071.js",
     "static/js/787.28cb0dcd.chunk.js": "/hackthon-demo/static/js/787.28cb0dcd.chunk.js",
     "static/media/TopBackImg.png": "/hackthon-demo/static/media/TopBackImg.f996b93fc3d8b2271fac.png",
     "static/media/background.png": "/hackthon-demo/static/media/background.1c1c0a04f8ca6d5fb704.png",
     "static/media/example.png": "/hackthon-demo/static/media/example.f453ac95b0c61c539415.png",
     "index.html": "/hackthon-demo/index.html",
-    "main.abb24ba1.css.map": "/hackthon-demo/static/css/main.abb24ba1.css.map",
-    "main.dbedb1fa.js.map": "/hackthon-demo/static/js/main.dbedb1fa.js.map",
+    "main.37c5662b.css.map": "/hackthon-demo/static/css/main.37c5662b.css.map",
+    "main.f06c8071.js.map": "/hackthon-demo/static/js/main.f06c8071.js.map",
     "787.28cb0dcd.chunk.js.map": "/hackthon-demo/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abb24ba1.css",
-    "static/js/main.dbedb1fa.js"
+    "static/css/main.37c5662b.css",
+    "static/js/main.f06c8071.js"
   ]
 }

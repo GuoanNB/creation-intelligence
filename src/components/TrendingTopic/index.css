@@ -89,7 +89,12 @@
 .displayContent {
     width: 900px;
 }
-
+.titleColumn {
+    width: 491px;
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
 .expand {
     width: 12px;
     height: 7px;
@@ -147,7 +152,7 @@
     cursor: pointer;
 }
 .data {
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 .Vertical {
     margin-bottom: 40px;
@@ -164,6 +169,12 @@
 .number1 {
     font-weight: 600;
     font-size: 14px;
+}
+.number1, .number2, .number3, .number4 {
+    width: 491px;
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
 }
 .searchVolume {
     display: flex;

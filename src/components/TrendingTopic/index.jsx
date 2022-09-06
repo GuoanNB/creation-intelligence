@@ -3,98 +3,98 @@ import React from 'react';
 import { Table } from 'antd';
 import 'antd/dist/antd.min.css';
 import Slider  from './slider';
-import example from '../../images/example.png';
 import Scarce from '../../images/Scarce.png';
 import raise from '../../images/raise.png';
-import Moderate from '../../images/Moderate.png'
-import Saturated from '../../images/Saturated.png'
-import downArrow from '../../images/down-arrow.png'
-import { getRecently7days } from '../../utils';
+import Moderate from '../../images/Moderate.png';
+import Saturated from '../../images/Saturated.png';
+import downArrow from '../../images/down-arrow.png';
+import down from '../../images/down.png';
+import parallel from '../../images/parallel.png';
+import { getRecently7days, getTredingTopics, tableData } from '../../utils';
 import classNames from 'classnames';
 const days = getRecently7days();
-const verticals = ['All', 'News', 'Finace', 'Sports', 'Technology'];
+const verticals = ['All', 'News', 'Finace', 'Sports', 'Entertainment', 'Others'];
 
 const columns = [
-  { title: <div>Topic</div>, dataIndex: 'topic', key: 'topic' },
+  { title: <div >Topic</div>, dataIndex: 'topic', key: 'topic'},
   { title: <div className='searchVolume'>Search volume <img src={downArrow} alt="down-arrow" /></div>, dataIndex: 'searchVolume', key: 'searchVolume' },
   { title: 'MSN content supply', dataIndex: 'msn', key: 'msn' }
 ];
-const data = [
-  {
-    key: 1,
-    topic: <div className='number1'><span>#1</span>Family day</div> ,
-    searchVolume: <div className='number1Volume'><span>300,232</span><img src={raise} alt="raise" /></div>,
-    msn: <div className='Scarce'><img src={Scarce} alt="scarce" /> Scarce</div>,
-    description: <div className="sliderContainer">
-                <Slider selectedIndex={0} onClick={()=> {}}>
-                    <div className="item">
-                        <img src={example} alt="" />
-                        <div className='itemContent'>
-                            <span>How a visual artist redefines sucess in graphic defign</span>
-                        </div>
-                        <div className='itemResource'>MSN</div>
-                    </div>
-                    <div className="item">
-                    <img src={example} alt="" />
-                        <div className='itemContent'>
-                            <span>How a visual artist redefines sucess in graphic defign</span>
-                        </div>
-                        <div className='itemResource'>MSN</div>
-                    </div>
-                    <div className="item">
-                    <img src={example} alt="" />
-                        <div className='itemContent'>
-                            <span>How a visual artist redefines sucess in graphic defign</span>
-                        </div>
-                        <div className='itemResource'>MSN</div>
-                    </div>
-                    <div className="item">
-                    <img src={example} alt="" />
-                        <div className='itemContent'>
-                            <span>How a visual artist redefines sucess in graphic defign</span>
-                        </div>
-                        <div className='itemResource'>MSN</div>
-                    </div>
-                    <div className="item">
-                    <img src={example} alt="" />
-                        <div className='itemContent'>
-                            <span>How a visual artist redefines sucess in graphic defign</span>
-                        </div>
-                        <div className='itemResource'>MSN</div>
-                    </div>
-                </Slider></div>,
-  },
-  {
-    key: 2,
-    topic: <div className='number2'><span>#2</span>Jim Green</div>,
-    searchVolume: <div className='number1Volume'><span className='notNumber1'>422,333</span><span className='new'>New</span></div>,
-    msn: <div className='Moderate'><img src={Moderate} alt="scarce" /> Moderate</div>,
-    description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-  },
-  {
-    key: 3,
-    topic: <div className='number3'><span>#3</span>Jim Green</div>,
-    searchVolume: <div className='number1Volume'><span className='notNumber1'>422,333</span><span className='new'>New</span></div>,
-    msn: <div className='Saturated'><img src={Saturated} alt="scarce" /> Saturated</div>,
-    description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-  },
-  {
-    key: 4,
-    topic: <div className='number4'><span>#4</span>Jim Green</div>,
-    searchVolume: <div className='number1Volume'><span className='notNumber1'>422,333</span><span className='new'>New</span></div>,
-    msn: <div className='Saturated'><img src={Saturated} alt="scarce" /> Saturated</div>,
-    description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-  },
-]
+const contentSupplyTemplate = (status) => {
+    switch(status) {
+        case 'Scarce': 
+            return <img src={Scarce} alt="scarce" />
+        case 'Moderate': 
+            return <img src={Moderate} alt="scarce" />
+        case 'Saturated': 
+            return <img src={Saturated} alt="scarce" />
+        default: 
+            return null
+    }
+};
+const searchVolumnTemplate = (status) => {
+    switch(status) {
+        case 'Up':
+            return <img src={raise} alt="raise" />;
+        case 'Down': 
+            return <img src={down} alt="down" />;
+        case 'New': 
+            return <span className='new'>New</span>
+        case 'None':
+            return <img src={parallel} alt='none' />
+        default: 
+            return null;
+    }
+}
+
 const TrendingTopic = () => {
     const [ dataActiveIndex, setDateActiveIndex ] = React.useState(0);
     const [ verticalActiveIndex, setVerticalActiveIndex ] = React.useState(0);
+    const [ trendTopic, setTrendTopic] = React.useState([]);
     const dateClick = (index) => {
         setDateActiveIndex(index)
     } 
     const verticalClick = (index) => {
         setVerticalActiveIndex(index)
-    } 
+    }
+    const openDoc = (link) => {
+        window.open(link);
+    }
+    React.useEffect(() => {
+        const trendTopic = tableData.map((item, index) => {
+            return {
+                key: index+1,
+                topic: <div className={'number'+(index+1)}><span>#{index+1}</span>{item.Topic}</div>,
+                searchVolume: <div className={'number1Volume'}>
+                                <span className={'notNumber1'}>
+                                    {Number(item.SearchVolumn.Score).toLocaleString()}
+                                </span>
+                                {searchVolumnTemplate(item.SearchVolumn.Signal)}
+                                </div>,
+                msn: <div className={item.MsnContentSupply}>{contentSupplyTemplate(item.MsnContentSupply)}{item.MsnContentSupply}</div>,
+                description: <div className="sliderContainer">
+                    <Slider selectedIndex={0} onClick={()=> {}}>
+                    {item.Items.map((subContent, index) => {
+                        return <div className="item" onClick={() => {openDoc(item.DocLink)}}>
+                            <img src={subContent.ImgUrl} alt="imge" />
+                            <div className='itemContent'>
+                                <span>{subContent.Title}</span>
+                            </div>
+                            <div className='itemResource'>{subContent.Source}</div>
+                        </div>
+                    })}
+                    </Slider>
+                </div>,
+            }
+        })
+        setTrendTopic(trendTopic);
+        getTredingTopics({
+            date: '2022-09-05',
+            vertical: 'All'
+        }).then((json)=> {
+            console.log('JSON', json)
+        })
+    }, [])
     return (
       <div className="trendContainer">
         <div className="trendingTitle">
@@ -129,6 +129,7 @@ const TrendingTopic = () => {
             </div>
         </div>
         <div className="displayContent">
+        {trendTopic && trendTopic.length>1 &&
           <Table
               pagination={false}
               columns={columns}
@@ -142,8 +143,9 @@ const TrendingTopic = () => {
                 <div className='fold' onClick={e => onExpand(record, e)} />
                 )
               }}
-              dataSource={data}
+              dataSource={trendTopic}
           />
+        }
         </div>
       </div>
   );
