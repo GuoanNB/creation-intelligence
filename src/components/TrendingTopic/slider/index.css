@@ -73,7 +73,7 @@
   }
   
   .mousex-slider-item:last-of-type {
-    margin-right: 0;
+    margin-right: 32px;
   }
   
   .mousex-slider-item.selected,
