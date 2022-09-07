@@ -69,6 +69,7 @@ export const useSyncCallback = callback => {
 
     return Func
 }
+export const sampleContentList = ["123", "456"]
 export const tableData = [
     {
         "Topic": "Family Day",
