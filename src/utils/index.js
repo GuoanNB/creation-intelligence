@@ -2,6 +2,14 @@ import axios from "axios";
 import { useEffect, useState, useCallback } from 'react'
 
 const baseUrl = "https://intelligencedemo.azurewebsites.net"
+
+export const getTopHeadlines = () => {
+    return axios({
+        method: "GET",
+        url: `${baseUrl}/api/TopHeadlines?code=vc8imPqI41TNXbJbTJy6XfPZFfkMvB9MAcedxGXAk_7rAzFuNBb6mQ==`,
+    })
+}
+
 export const getSuggestionTitle = (data = {}) => {
     return axios({
         method: "post",

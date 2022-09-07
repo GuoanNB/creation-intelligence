@@ -1,9 +1,12 @@
 import "./index.css"
+
+import { Button, Input, Tooltip, message } from "antd";
+
+import { Link } from "react-router-dom";
 import React from "react";
-import { Input, Button, Tooltip, message } from "antd";
+import TabBar from "./TabBar";
 import { arrowGreenSVG } from "../../Icons/svg";
 import { getSuggestionTitle } from "../../utils/index";
-import TabBar from "./TabBar";
 
 const { TextArea } = Input;
 
@@ -145,11 +148,12 @@ const HeadlineGenerator = () => {
     }
     return (
         <>
-            <img className="title-img" src={require("../../images/headline.png")} alt=""></img>
+            <div className="headline-title">Headline generator</div>
             <div className="title normal-font align-center">{title}​</div>
             <div className="description normal-font align-center">
                 <span>{description}</span>
-                <a href="/tops" target="_blank">Headline optimization records</a>
+                {/* <a href="/tops" target="_blank">Headline optimization records</a> */}
+                <Link to="/hackthon-demo/tops">Headline optimization records</Link>
             </div>
             <TabBar tabIndex={tabIndex} onChange={handleTabChange} />
             <div className="sub-title normal-title normal-font">{subTitle}</div>

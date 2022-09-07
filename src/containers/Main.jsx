@@ -1,10 +1,12 @@
 import './index.css';
-import React from 'react';
-import { Logo, Start, Shape, NameCard } from './assets';
 import 'antd/dist/antd.min.css';
+
+import { Logo, NameCard, Shape, Start } from './assets';
+
+import HeadlineGenerator from "../components/headlineGenerator";
 import ImageSlice from "../components/ImageSlice";
+import React from 'react';
 import TrendingTopic from "../components/TrendingTopic";
-import HeadlineGenerator from "../components/HeadlineGenerator";
 
 const Main = () => {
   const trendingTopicExplorerRef = React.useRef(null);
@@ -99,10 +101,10 @@ const Main = () => {
           </div>
         </div>
 
-        <div id={"trendingTopicExplorer"} className="trendingTopicExplorer" ref={trendingTopicExplorerRef}>
+        <div id={"trendingTopicExplorer"} className="section-container trendingTopicExplorer" ref={trendingTopicExplorerRef}>
           <TrendingTopic />
         </div>
-        <div id="headlineGenerator" ref={headlineGeneratorRef}>
+        <div id="headlineGenerator" ref={headlineGeneratorRef} className="section-container">
           <HeadlineGenerator />
         </div>
         <div id={"videoEditing"} ref={videoEditingRef} className="section-container">
