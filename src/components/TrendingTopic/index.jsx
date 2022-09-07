@@ -69,7 +69,7 @@ const TrendingTopic = () => {
         return arr.map((item, index) => {
             return {
                 key: index+1,
-                topic: <div className={'number'+(index+1)}><span>#{index+1}</span>{item.Topic}</div>,
+                topic: <div className={'number'+(index+1<4 ? index+1 : 4)}><span>#{index+1}</span>{item.Topic}</div>,
                 searchVolume: <div className={'number1Volume'}>
                                 <span className={'notNumber1'}>
                                     {Number(item.SearchVolumn.Score).toLocaleString()}

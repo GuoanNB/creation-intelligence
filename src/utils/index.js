@@ -119,6 +119,23 @@ export const tableData = [
                 "Source": "MSN",
                 "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
                 "DocLink": "https://www.baidu.com"
+            },
+            {
+                "Title": "How to Write Content About Your Photographs",
+                "Source": "MSN",
+                "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+                "DocLink": "https://www.baidu.com"
+            },{
+                "Title": "How to Write Content About Your Photographs",
+                "Source": "MSN",
+                "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+                "DocLink": "https://www.baidu.com"
+            },
+            {
+                "Title": "How to Write Content About Your Photographs",
+                "Source": "MSN",
+                "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+                "DocLink": "https://www.baidu.com"
             }
     ]
     },
@@ -141,7 +158,100 @@ export const tableData = [
                 "Source": "MSN",
                 "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
                 "DocLink": "https://www.baidu.com"
+            },
+            {
+                "Title": "How to Write Content About Your Photographs",
+                "Source": "MSN",
+                "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+                "DocLink": "https://www.baidu.com"
+            },{
+                "Title": "How to Write Content About Your Photographs",
+                "Source": "MSN",
+                "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+                "DocLink": "https://www.baidu.com"
+            },
+            {
+                "Title": "How to Write Content About Your Photographs",
+                "Source": "MSN",
+                "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+                "DocLink": "https://www.baidu.com"
             }
+    ]
+    },
+    {
+        "Topic": "Family Day",
+        "SearchVolumn": {
+            "Score": 600000,
+            "Signal": "Down" //Enum: Up, Down, New, None
+        },
+        "MsnContentSupply": "Scarce", // Enum: Scarce, Moderate, Sarurated
+        "Items": [{
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },
+        {
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },
+        {
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },{
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },
+        {
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        }
+    ]
+    },
+    {
+        "Topic": "Family Day",
+        "SearchVolumn": {
+            "Score": 600000,
+            "Signal": "None" //Enum: Up, Down, New, None
+        },
+        "MsnContentSupply": "Scarce", // Enum: Scarce, Moderate, Sarurated
+        "Items": [{
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },
+        {
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },
+        {
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },{
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        },
+        {
+            "Title": "How to Write Content About Your Photographs",
+            "Source": "MSN",
+            "ImgUrl": "https://intelligencedemo.azureedge.net/demo/4.png",
+            "DocLink": "https://www.baidu.com"
+        }
     ]
     }
 ]
