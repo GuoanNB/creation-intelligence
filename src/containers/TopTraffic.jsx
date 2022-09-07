@@ -2,17 +2,31 @@ import './index.css';
 import React from 'react';
 import TopTitleCell from "../components/TopTitleCell";
 import { Skeleton } from 'antd';
-
+import { getTopHeadlines } from "../utils"
 import { Logo } from './assets';
 const testData = {
-        oriTitle: "Works worth millions donated to gallery in show of support", recTitle: "Machine Gun Kelly and Mod Sun's Stoner Comedy Was Inspired by a Real-Life Event", PVLift: "21.5%", OriCTR: "1.5%", OptCTR:"9.7%", imageURL: "https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
+        OriginHeadline: "Works worth millions donated to gallery in show of support", Headline: "Machine Gun Kelly and Mod Sun's Stoner Comedy Was Inspired by a Real-Life Event", PVLift: "21.5%", OriginCTR: "1.5%", OptimaizedCTR:"9.7%", ImgUrl: "https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
 }
 
 const testList = Array(20).fill(testData);
 
 
 const TopTraffic = () => {
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [dataList, setList] = React.useState([]);
+
+
+
+  React.useEffect(() => {
+    const getHeadlines = async () => {
+      const {data} = await getTopHeadlines();
+      // console.log("res", data)
+      setList(data)
+      setIsLoading(false);
+    }
+    getHeadlines();
+  }, [])
+
   return (
     <div className="TopCointainer"> 
       <header className="App-header">
@@ -28,9 +42,9 @@ const TopTraffic = () => {
           </div>
 
           <div className="ListContainer">
-            <Skeleton loading={isLoading} active avatar round>
-              {testList.map((item, idx) => {
-                  return <TopTitleCell key={item.oriTitle + idx} {...item}/>
+            <Skeleton loading={isLoading || !dataList.length} active avatar round>
+              {dataList.map((item, idx) => {
+                  return <TopTitleCell key={item.OriginHeadline + idx} {...item}/>
               })}
             </Skeleton>
 

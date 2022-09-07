@@ -87,6 +87,7 @@
   .section-container {
       width: 100%;
       height: auto;
+      padding-top: 120px;
   }
   .Section-title {
     font-weight: 400;

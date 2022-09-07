@@ -4,7 +4,7 @@ import { Image } from 'antd';
 import { Triangle } from '../../containers/assets';
 
 
-const TopTitleCell = ({oriTitle, recTitle, PVLift, OriCTR, OptCTR, imageURL}) => {
+const TopTitleCell = ({OriginHeadline, Headline, PVLift, OriginCTR, OptimaizedCTR, ImgUrl}) => {
 
   return (
     <div className="TitleCellCointainer">
@@ -12,35 +12,28 @@ const TopTitleCell = ({oriTitle, recTitle, PVLift, OriCTR, OptCTR, imageURL}) =>
             <div className="RecTitle">
                 Recommended headline
             </div>
-            <div className="RecTitleContent"  title={recTitle}>
-                {recTitle}
+            <div className="RecTitleContent"  title={Headline}>
+                {Headline}
             </div>
             <div className="DataArea">
                 <div className="DataAreaHalf">
                     <div className="OriTitle">Original headlines</div>
-                    <div className="OriTitleContent" title={oriTitle}>{oriTitle}</div>
-
+                    <div className="OriTitleContent" title={OriginHeadline}>{OriginHeadline}</div>
                 </div>
                 <div className="DataAreaRight">
                     <div className="DataCell ">
                         <div className="DataCellTitle">PV lift</div>
-                        <div className="DataCellContent GrowthData">{Triangle()}{PVLift}</div>
-
+                        <div className="DataCellContent GrowthData">{Triangle()}{`${parseFloat(PVLift * 100).toPrecision(3)}%`}</div>
                     </div>
                     <div className="DataCell">
                         <div className="DataCellTitle">Original CTR</div>
-                        <div className="DataCellContent">{OriCTR}</div>
-
-
+                        <div className="DataCellContent">{`${parseFloat(OriginCTR * 100).toPrecision(2)}%`}</div>
                     </div>
                     <div className="DataCell">
                         <div className="DataCellTitle">Optimized CTR</div>
-                        <div className="DataCellContent" >{OptCTR}</div>
+                        <div className="DataCellContent" >{`${parseFloat(OptimaizedCTR * 100).toPrecision(2)}%`}</div>
                     </div>
-
                 </div>
-
-
             </div>
         </div>
         <Image
@@ -48,7 +41,7 @@ const TopTitleCell = ({oriTitle, recTitle, PVLift, OriCTR, OptCTR, imageURL}) =>
           preview={true}
           width={251}
           height={156}
-          src={imageURL}
+          src={ImgUrl}
         />
     </div>
   );
