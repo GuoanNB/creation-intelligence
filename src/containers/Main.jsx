@@ -72,7 +72,7 @@ const Main = () => {
           <div className="Page-top-cubes-container">
             {/* <div  className="Page-top-cube-border"> */}
               <div className="Page-top-cube" onClick={() => {
-                headlineGeneratorRef.current.scrollIntoView();
+                trendingTopicExplorerRef.current.scrollIntoView();
               }}>
               <div>{Start(false, 40)}</div>
               Trending topic explorer
@@ -81,7 +81,7 @@ const Main = () => {
 
             {/* <div className="Page-top-cube-border"> */}
                 <div className="Page-top-cube" onClick={() => {
-                  trendingTopicExplorerRef.current.scrollIntoView();
+                  headlineGeneratorRef.current.scrollIntoView();
                 }}>
                   <div>{Shape(false, 40)}</div>
                   Headline generator

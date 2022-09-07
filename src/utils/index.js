@@ -18,7 +18,7 @@ export const getTredingTopics = (data = {}) => {
 
 export const getRecently7days = () => {
     let days = [];
-    for(let i = 0; i < 7; i++) {
+    for(let i = 1; i < 8; i++) {
         days.push(getFormatDay(i))
     }
     return days;
@@ -35,9 +35,9 @@ const getFormatDay = (num) => {
     const displayDay = date.getDate() + ' ';
     const yDate = year + '-' + month + '-'+day
     let displayDate;
-    if(num === 0) {
+    if(num === 1) {
         displayDate = 'Today'
-    } else if(num === 1) {
+    } else if(num === 2) {
         displayDate = 'Yesterday'
     } else {
         displayDate = displayMonth + '/' + displayDay
