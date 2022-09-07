@@ -27,7 +27,7 @@ div {
     color: #1A1A1A;
 }
 .headline-title{
-    background-image: radial-gradient( #FD7C2A, #00E2C8, #F4A628, #00E2C8, #A829FE);
+    background-image: radial-gradient( #FD7C2A, #fc7a00, #f7de01, #F4A628, #00E2C8, #A829FE);
     color :transparent; 
     background-clip:text;
     font-family: 'Inter';
