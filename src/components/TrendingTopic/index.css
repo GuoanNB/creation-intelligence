@@ -89,6 +89,11 @@
     margin-right: 8px;
 }
 
+.None {
+    width: 10px !important;
+    height: 2px !important;
+}
+
 .displayContent {
     width: 900px;
 }
