@@ -3,7 +3,7 @@ import 'antd/dist/antd.min.css';
 
 import { Logo, NameCard, Shape, Start } from './assets';
 
-import HeadlineGenerator from "../components/HeadlineGenerator";
+import HeadlineGenerator from "../components/headlineGenerator";
 import ImageSlice from "../components/ImageSlice";
 import React from 'react';
 import TrendingTopic from "../components/TrendingTopic";

@@ -10,11 +10,11 @@ import TopTraffic from "./containers/TopTraffic";
 const App = () => {
   return (
     <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter  basename="/hackthon-demo">
       <Routes>
-        <Route path="/hackthon-demo/" element={<Main />}>
+        <Route path="/" element={<Main />}>
         </Route>
-        <Route path="/hackthon-demo/tops" element={<TopTraffic />} />
+        <Route path="/tops" element={<TopTraffic />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
