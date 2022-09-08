@@ -43,39 +43,41 @@ const ImageSlice = () => {
         Provide video shooting, audio and video mixing, sticker effects, beautification filters and teleprompters, while supporting mobile, PC short video shooting, online conferences, webinars and other wide range of scenes, so that you stand out in video creation.
         </div>
         <div className="imgContainer">
-          <ImageCell isReversed={false} cardTitle={"01"} cardText={"Cut & Editing"} coverContent={
+          <ImageCell isReversed={false} cardTitle={"01"} cardText={"Cut & Editing"} imageUrl={require("../../images/vedioA.png")} coverContent={
             <SliceInner
             index={"01"}
             title={"Cut & Editing"}
             context={"Provide tens of thousands of explosive special effect stickers which are realistic, innovative and interesting"}
+            
             />
           }/>
-          <ImageCell isReversed={true} cardTitle={"02"} cardText={"Filters & Stickers"} coverContent={
+          <ImageCell isReversed={true} cardTitle={"02"} cardText={"Filters & Stickers"}  imageUrl={require("../../images/vedio2.png")}  coverContent={
             <SliceInner
             index={"02"}
             title={"Filters & Stickers"}
-            context={""}
+            context={"No need of reciting long scripts, just focus on your phone and read them out in a natural recording way."}
             />
           }/>
           <ImageCell isReversed={false} cardTitle={"03"} cardText={"Telepromoter"} coverContent={
             <SliceInner
             index={"03"}
             title={"Telepromoter"}
-            context={""}
+            context={"Video/audio mixing during a recording or offline​"}
             />
             }
             imageUrl={"https://is4-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/f9/26/69/f92669cb-c879-6685-7cd8-051928ff92ea/2404b510-b22f-4c12-9fb3-07c120c08745_screen3.png/460x0w.webp"}
           />
-          <ImageCell isReversed={true} cardTitle={"04"} cardText={"Teams webinar"} coverContent={
+          <ImageCell isReversed={true} cardTitle={"04"} cardText={"Teams webinar"} imageUrl={require("../../images/vedio3.png")} coverContent={
             <SliceInner
             index={"04"}
             title={"Teams webinar"}
             context={"Record a webinar with filters, stickers and animations with teams, you are professional and innovative! "}
+            
             />
           }/>
         </div>
         <div className="bigImageContainer">
-          <div className="bigImageTitle">Title 1</div>
+          <div className="bigImageTitle">Microsoft Custom Filters empower Webinar creators to apply filters and frames via TEAMS meeting </div>
           <Image
             preview={false}
             width={900}
@@ -84,7 +86,7 @@ const ImageSlice = () => {
           />
         </div>
         <div className="bigImageContainer">
-          <div className="bigImageTitle">Title 2</div>
+          <div className="bigImageTitle">Rich and innovate graphic materials</div>
             <Carousel className="CarouselContainer">
               {/* <div>
                 <h3 style={contentStyle}>1</h3>
@@ -96,9 +98,9 @@ const ImageSlice = () => {
                 <video width="100%" height="100%" controls preload src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/dynamic_frame.mp4">
                 </video>
               </div>
-              <div>
+              {/* <div>
                 <h3 style={contentStyle}>4</h3>
-              </div>
+              </div> */}
             </Carousel>
         </div>
     </div>
