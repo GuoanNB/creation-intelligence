@@ -87,68 +87,57 @@ const ImageSlice = () => {
         <div className="bigImageContainer">
           <div className="bigImageTitle">Video Core Capability Exploring Landed in TEAMS and in process of Ignite and GA (mid Oct)</div>
               <div>
-                <video width="900" height="507" controls src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/dynamic_frame.mp4">
+                <video width="900" height="507" controls src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/dynamic_frame.mp4" poster={require("../../images/VideoCore.png")}>
                 </video>
               </div>
+              {/* <Image
+                preview={false}
+                width={900}
+                height={507}
+                src={require("../../images/VideoCore.png")}
+              /> */}
         </div>
 
         <div className="bigImageContainer">
           <div className="bigImageTitle">More Frames to be Released Post GA</div>
-            <Carousel className="CarouselContainer" autoplay>
-              {/* <div>
-                <h3 style={contentStyle}>1</h3>
-              </div>
-              <div>
-                <h3 style={contentStyle}>2</h3>
-              </div> */}
-            <div>
+            <Carousel dotPosition = {"top"} className="CarouselContainer" autoplay>
               <Image
                 preview={false}
-                width={900}
-                height={507}
+                width={"100%"}
+                height={"100%"}
                 src={require("../../images/slide1.png")}
               />
-            </div>
-            <div>
               <Image
                 preview={false}
-                width={900}
-                height={507}
+                width={"100%"}
+                height={"100%"}
                 src={require("../../images/slide2.png")}
               />
-            </div>
-            <div>
               <Image
                 preview={false}
-                width={900}
-                height={507}
+                width={"100%"}
+                height={"100%"}
                 src={require("../../images/slide3.png")}
               />
-            </div>
-            <div>
               <Image
                 preview={false}
-                width={900}
-                height={507}
+                width={"100%"}
+                height={"100%"}
                 src={require("../../images/slide4.png")}
               />
-            </div>
-            <div>
+
               <Image
                 preview={false}
-                width={900}
-                height={507}
+                width={"100%"}
+                height={"100%"}
                 src={require("../../images/slide5.png")}
               />
-            </div>
-            <div>
               <Image
                 preview={false}
-                width={900}
-                height={507}
+                width={"100%"}
+                height={"100%"}
                 src={require("../../images/slide6.png")}
               />
-            </div>
             </Carousel>
         </div>
     </div>
