@@ -113,7 +113,14 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-
+.articleTitle {
+    font-weight: 600;
+    font-size: 14px;
+    color: #717171;
+    margin-left: 36px;
+    margin-top: -6px;
+    margin-bottom: 8px;
+  }
 .fold img {
     width: 12px;
     height: 7px;
@@ -124,6 +131,9 @@
 
 .sliderContainer {
     width: 868px;
+}
+.topic {
+    margin-left: -18px;
 }
 .item {
     display: flex;
@@ -136,6 +146,7 @@
     width: 226px;
     height: 119px;
     background-size: contain;
+    background-color: white;
 }
 .itemContent {
     width: 226px;
@@ -194,6 +205,7 @@
     font-size: 14px;
 }
 .number1, .number2, .number3, .number4 {
+    margin-left: -18px;
     width: 491px;
     overflow: hidden; 
     white-space: nowrap; 
