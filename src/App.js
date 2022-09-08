@@ -8,6 +8,8 @@ import React from 'react';
 import TopTraffic from "./containers/TopTraffic";
 import Portal from "./containers/Portal";
 import Web3 from './components/Web3';
+import Audience from './components/Audience';
+
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
         <Route path="/Intelligence" element={<Main />}/>
         <Route path="/tops" element={<TopTraffic />} />
         <Route path="/web3" element={<Web3 />} />
+        <Route path="/Audience" element={<Audience />} />
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
