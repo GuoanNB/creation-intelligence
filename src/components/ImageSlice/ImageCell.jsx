@@ -2,7 +2,7 @@ import './index.css';
 import React from 'react';
 import { Image } from 'antd';
 
-const ImageCell = ({isReversed, cardTitle, cardText, coverContent}) => {
+const ImageCell = ({isReversed, cardTitle, cardText, coverContent, imageUrl}) => {
   const [visible, setVisible] = React.useState(false);
   return (
     <div className="imgCellContainer"         
@@ -12,7 +12,7 @@ const ImageCell = ({isReversed, cardTitle, cardText, coverContent}) => {
         preview={false}
         width={"100%"}
         height={"100%"}
-        src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
+        src={imageUrl}
       />
       {!visible && <div className={isReversed ? "upTab" : "downTab"}>
         <div className="tabTitle">
