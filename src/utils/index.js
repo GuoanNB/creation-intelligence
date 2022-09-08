@@ -70,6 +70,56 @@ export const useSyncCallback = callback => {
     return Func
 }
 export const sampleContentList = ["123", "456"]
+export const newsLetterList = [
+    {
+        title: "Ownership",
+        subTitle: "Fully control of contents and subscribers",
+        description: [
+            "Create what you want and what your audience loves. You don’t have to conform to popular taste",
+            "Make your audience the private property"
+        ]
+    },
+    {
+        title: "Grow",
+        subTitle: "Grow audience with global Microsoft users",
+        description: [
+            "Promote your content and grow your audience on Microsoft surfaces, Windows, Outlook, Edge, Bing. Be prepared for your global fans!"
+        ]
+    },
+    {
+        title: "Free",
+        subTitle: "Free to use with extra bonus on your growth",
+        description: [
+            "Free to use before you gain first $100,000",
+            "$100 bonus on your growth milestones"
+        ]
+    },
+    {
+        title: "Income",
+        subTitle: "Reoccurring income on subscription",
+        description: [
+            "Stop rolling the dice of ad revenue and per-stream payouts. Get recurring income through monthly payments from your subscribers",
+            "Supporting 16 currencies across 108 regions"
+        ]
+    }
+]
+export const discordList = [
+    {
+        title: "Secure",
+        subTitle: "Secure your followers into private property",
+        description: [
+            "Migrate your followers to de-centralized and democratic web where you have more control with little platforms intervene"
+        ]
+    },
+    {
+        title: "Paid community",
+        subTitle: "Build your paid Discord server",
+        description: [
+            "Set up a price for your private Discord servers, you make income and make your audience happier.",
+            "NFT payment tap your business early to Web3"
+        ]
+    }
+]
 export const tableData = [
     {
         "Topic": "Family Day",

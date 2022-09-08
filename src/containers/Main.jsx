@@ -4,6 +4,7 @@ import 'antd/dist/antd.min.css';
 import { Logo, NameCard, Shape, Start } from './assets';
 
 import HeadlineGenerator from "../components/HeadlineGenerator";
+// import Audience from '../components/Audience';
 import ImageSlice from "../components/ImageSlice";
 import React from 'react';
 import TrendingTopic from "../components/TrendingTopic";
@@ -106,6 +107,7 @@ const Main = () => {
         </div>
         <div id="headlineGenerator" ref={headlineGeneratorRef} className="section-container">
           <HeadlineGenerator />
+          {/* <Audience /> */}
         </div>
         <div id={"videoEditing"} ref={videoEditingRef} className="section-container">
           <ImageSlice/>
