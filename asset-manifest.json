@@ -1,20 +1,31 @@
 {
   "files": {
-    "main.css": "/creation-intelligence/static/css/main.d80e3c07.css",
-    "main.js": "/creation-intelligence/static/js/main.c7234960.js",
+    "main.css": "/creation-intelligence/static/css/main.bcaacc49.css",
+    "main.js": "/creation-intelligence/static/js/main.3ace87eb.js",
     "static/js/787.28cb0dcd.chunk.js": "/creation-intelligence/static/js/787.28cb0dcd.chunk.js",
     "static/media/TopBackImg.png": "/creation-intelligence/static/media/TopBackImg.f996b93fc3d8b2271fac.png",
     "static/media/background.png": "/creation-intelligence/static/media/background.1c1c0a04f8ca6d5fb704.png",
     "static/media/content-1.png": "/creation-intelligence/static/media/content-1.f3dc2447c572d22812b0.png",
     "static/media/content-2.png": "/creation-intelligence/static/media/content-2.9c200e914f4ddeef4a6b.png",
     "static/media/web3-background.png": "/creation-intelligence/static/media/web3-background.4900010514cbe525700a.png",
+    "static/media/vedio2.png": "/creation-intelligence/static/media/vedio2.3bf8674efc2c4e403435.png",
+    "static/media/vedio3.png": "/creation-intelligence/static/media/vedio3.b184814b5882a36b98fc.png",
+    "static/media/vedioA.png": "/creation-intelligence/static/media/vedioA.e239add89eacf665c851.png",
+    "static/media/‌integelent.png": "/creation-intelligence/static/media/‌integelent.610856cefcb1eb3570fb.png",
+    "static/media/audience2.png": "/creation-intelligence/static/media/audience2.258723c43bb3a0c6442d.png",
+    "static/media/audience0.png": "/creation-intelligence/static/media/audience0.dcaf0b23b1d4402d088a.png",
+    "static/media/audience3.png": "/creation-intelligence/static/media/audience3.b1bdc8fd547ae2c9b4c9.png",
+    "static/media/audience1.png": "/creation-intelligence/static/media/audience1.944493eb3080ac15cc32.png",
+    "static/media/Incentives.png": "/creation-intelligence/static/media/Incentives.917c50602cd9731b975b.png",
+    "static/media/wallet.png": "/creation-intelligence/static/media/wallet.238faef9aa859348ddd3.png",
+    "static/media/BigRocket.png": "/creation-intelligence/static/media/BigRocket.1508f27290b2f8ce0c0c.png",
     "index.html": "/creation-intelligence/index.html",
-    "main.d80e3c07.css.map": "/creation-intelligence/static/css/main.d80e3c07.css.map",
-    "main.c7234960.js.map": "/creation-intelligence/static/js/main.c7234960.js.map",
+    "main.bcaacc49.css.map": "/creation-intelligence/static/css/main.bcaacc49.css.map",
+    "main.3ace87eb.js.map": "/creation-intelligence/static/js/main.3ace87eb.js.map",
     "787.28cb0dcd.chunk.js.map": "/creation-intelligence/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d80e3c07.css",
-    "static/js/main.c7234960.js"
+    "static/css/main.bcaacc49.css",
+    "static/js/main.3ace87eb.js"
   ]
 }
