@@ -13,7 +13,7 @@ import parallel from '../../images/parallel.png';
 import { getRecently7days, getTredingTopics, tableData, useSyncCallback } from '../../utils';
 import classNames from 'classnames';
 const days = getRecently7days();
-const verticals = ['All', 'News', 'Finace', 'Sports', 'Entertainment', 'Others'];
+const verticals = ['All', 'News', 'Finance', 'Sports', 'Entertainment', 'Others'];
 
 const columns = [
   { title: <div >Topic</div>, dataIndex: 'topic', key: 'topic'},
@@ -82,7 +82,7 @@ const TrendingTopic = () => {
                 description: <div className="sliderContainer">
                     <Slider selectedIndex={0} onClick={()=> {}}>
                     {item.Items.map((subContent, index) => {
-                        return <div className="item" onClick={() => {openDoc(item.DocLink)}}>
+                        return <div className="item" onClick={() => {openDoc(subContent.DocLink)}}>
                             <img src={subContent.ImgUrl} alt="imge" />
                             <div className='itemContent'>
                                 <span>{subContent.Title}</span>
