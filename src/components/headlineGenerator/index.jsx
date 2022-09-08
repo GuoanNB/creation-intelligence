@@ -54,7 +54,7 @@ const HeadlineGenerator = () => {
             setShowLoading1(true)
             getSuggestionTitle({
                 content_type: "text",
-                content: words
+                content: words.replace('\n', ' ')
             }).then(res => {
                 setShowLoading1(false)
                 setCustomizeSuggestionList(res.data.data)
@@ -124,7 +124,7 @@ const HeadlineGenerator = () => {
                 <div className="suggestion-title normal-title normal-font">{suggestionTitle}</div>
                 {customizeSuggestionList.map((item, index) => {
                     return <div key={item.title} className={`list-item${index === customizeSuggestionList.length - 1 ? "" : " border-bottom"}`}>
-                        <span id={`customize-item${index}`} className="customize-title ellipsis-title">{item.title}</span>
+                        <span id={`customize-item${index}`} className="customize-title">{item.title}</span>
                         <Tooltip title="copied!" trigger="click" placement="bottom">
                             <svg className="copy" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => onCopy(`customize-item${index}`)}>
                                 <path d="M4 0C2.89543 0 2 0.895431 2 2V12C2 13.1046 2.89543 14 4 14H10C11.1046 14 12 13.1046 12 12V2C12 0.89543 11.1046 0 10 0H4ZM3 2C3 1.44772 3.44772 1 4 1H10C10.5523 1 11 1.44772 11 2V12C11 12.5523 10.5523 13 10 13H4C3.44772 13 3 12.5523 3 12V2ZM0 4.00001C0 3.25973 0.402199 2.61339 1 2.26758V12.5C1 13.8807 2.11929 15 3.5 15H9.73244C9.38663 15.5978 8.74028 16 8 16H3.5C1.567 16 0 14.433 0 12.5V4.00001Z" fill="#717171"/>
@@ -150,7 +150,7 @@ const HeadlineGenerator = () => {
                     <div className="suggestion-title normal-title normal-font">{suggestionTitle}</div>
                     {msnSuggestionList.map((item, index) => {
                         return <div key={item.title} className={`list-item${index === msnSuggestionList.length - 1 ? "" : " border-bottom"}`}>
-                            <span id={`msn-item${index}`} className="msn-title ellipsis-title">{item.title}</span>
+                            <span id={`msn-item${index}`} className="msn-title">{item.title}</span>
                             <div className="flex-container">
                                 <div className="number-container">
                                     {item.gap > 0 ? arrowGreenSVG() : arrowGraySVG()}

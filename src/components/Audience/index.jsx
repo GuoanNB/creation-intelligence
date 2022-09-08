@@ -26,7 +26,6 @@ const renderContent = (tabIndex) => {
         </div>
     )
 }
-
 const renderFooter = () => {
     return (
         <div className="audience-footer">
@@ -39,11 +38,18 @@ const renderFooter = () => {
 const Audience = () => {
     const [tabIndex, setTabIndex] = React.useState(0)
     return (
-        <div className="audience-container">
-            <TabBar type={1} tabIndex={tabIndex} onChange={index => setTabIndex(index)} />
-            {renderContent(tabIndex)}
-            {renderFooter()}
-        </div>
+        <>
+            <div className="audience-header">
+                <div className="audience-header-title">Full control of your content and audience</div>
+                <div className="audience-header-subtitle">Let your most passionate fans support your creative work via subscription.</div>
+            </div>
+            <div className="audience-container">
+                <TabBar type={1} tabIndex={tabIndex} onChange={index => setTabIndex(index)} />
+                {renderContent(tabIndex)}
+                {renderFooter()}
+            </div>
+            <div className="bottom-bar">© 2022 MICROSOFT. ALL RIGHTS RESERVED.</div>
+        </>
     )
 }
 
