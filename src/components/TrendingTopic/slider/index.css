@@ -1,6 +1,7 @@
 .mousex-slider {
     position: relative;
-    padding: 0 32px;
+    /* padding: 0 32px; */
+    padding: 0 18px;
     width: 100%;
   }
   .mousex-slider-items-container {
@@ -16,7 +17,7 @@
     cursor: pointer;
     user-select: none;
   }
-  
+
   .mousex-slider-btn-prev,
   .mousex-slider-btn-next {
     display: none;
@@ -50,7 +51,7 @@
   
   .mousex-slider-items-wrapper {
     position: relative;
-    /* margin: 0 16px; */
+    margin: 0 16px;
     white-space: nowrap;
     overflow: hidden;
   }

@@ -18,7 +18,7 @@ const days = getRecently7days();
 const verticals = ['All', 'News', 'Finance', 'Sports', 'Entertainment', 'Others'];
 
 const columns = [
-  { title: <div >Topic</div>, dataIndex: 'topic', key: 'topic'},
+  { title: <div className='topic'>Topic</div>, dataIndex: 'topic', key: 'topic'},
   { title: <div className='searchVolume'>Search volume <img src={downArrow} alt="down-arrow" /></div>, dataIndex: 'searchVolume', key: 'searchVolume' },
   { title: 'MSN content supply', dataIndex: 'msn', key: 'msn' }
 ];
@@ -82,6 +82,7 @@ const TrendingTopic = () => {
                                 </div>,
                 msn: <div className={item.MsnContentSupply}>{contentSupplyTemplate(item.MsnContentSupply)}{item.MsnContentSupply}</div>,
                 description: <div className="sliderContainer">
+                    <div className="articleTitle">Articles realted to"{item.Topic}"</div>
                     <Slider selectedIndex={0} onClick={()=> {}}>
                     {item.Items.map((subContent, index) => {
                         return <div className="item" onClick={() => {openDoc(subContent.DocLink)}}>
