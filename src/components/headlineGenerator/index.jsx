@@ -5,7 +5,7 @@ import { Button, Input, Tooltip, message } from "antd";
 import { Link } from "react-router-dom";
 import React from "react";
 import TabBar from "../TabBar";
-import { arrowGreenSVG } from "../../Icons/svg";
+import { arrowGraySVG, arrowGreenSVG } from "../../Icons/svg";
 import { getSuggestionTitle, sampleContentList } from "../../utils/index";
 
 const { TextArea } = Input;
@@ -69,7 +69,6 @@ const HeadlineGenerator = () => {
                 content_type: "link",
                 content: url
             }).then(res => {
-                console.log('res', res)
                 setMsnResult(res.data)
                 setMsnSuggestionList(res.data.data)
             }).catch(err => {
@@ -147,8 +146,9 @@ const HeadlineGenerator = () => {
                             <span id={`msn-item${index}`} className="msn-title ellipsis-title">{item.title}</span>
                             <div className="flex-container">
                                 <div className="number-container">
-                                    {arrowGreenSVG()}
-                                    <span>{`${(item.ctr * 100).toFixed(1)}%`}</span>
+                                    {item.gap > 0 ? arrowGreenSVG() : arrowGraySVG()}
+                                    <span className="add">{ item.gap > 0 ? `${(item.gap * 100).toFixed(1)}%` : null}</span>
+                                    <span className="minus">{ item.gap <= 0 ? '—' : null}</span>
                                 </div>
                                 <Tooltip title="copied!" trigger="click" placement="bottom">
                                     <svg className="copy" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => onCopy(`msn-item${index}`)}>

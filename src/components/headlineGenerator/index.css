@@ -166,8 +166,11 @@ div {
     gap: 5px;
     margin-right: 38px;
 }
-.number-container >span {
+.add {
     color: #0F7B0F;
+}
+.minus {
+    color: #717171;
 }
 .ellipsis-title {
     overflow: hidden;
