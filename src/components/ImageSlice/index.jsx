@@ -22,12 +22,6 @@ const SliceInner = ({index, title, context}) => {
 }
 
 
-const contentStyle = {
-  height: "507px",
-  width: "900px",
-  textAlign: 'center',
-  background: '#364d79',
-};
 
 const ImageSlice = () => {
 
@@ -71,14 +65,14 @@ const ImageSlice = () => {
           <ImageCell isReversed={true} cardTitle={"04"} cardText={"Teams webinar"} imageUrl={require("../../images/vedio4.png")} coverContent={
             <SliceInner
             index={"04"}
-            title={"Teams webinar"}
+            title={"Teams Webinar"}
             context={"Record a webinar with filters, stickers and animations with teams, you are professional and innovative! "}
             
             />
           }/>
         </div>
         <div className="bigImageContainer">
-          <div className="bigImageTitle">Microsoft Custom Filters empower Webinar creators to apply filters and frames via TEAMS meeting </div>
+          <div className="bigImageTitle">Microsoft Custom Filters Empower Webinar Creators to Apply Filters and Frames via TEAMS Meeting </div>
           {/* <Image
             preview={false}
             width={900}
@@ -91,7 +85,7 @@ const ImageSlice = () => {
               </div>
         </div>
         <div className="bigImageContainer">
-          <div className="bigImageTitle">Video core capability exploring landed in TEAMS and in process of Ignite and GA (mid Oct)</div>
+          <div className="bigImageTitle">Video Core Capability Exploring Landed in TEAMS and in process of Ignite and GA (mid Oct)</div>
               <div>
                 <video width="900" height="507" controls src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/dynamic_frame.mp4">
                 </video>
@@ -99,8 +93,8 @@ const ImageSlice = () => {
         </div>
 
         <div className="bigImageContainer">
-          <div className="bigImageTitle">Rich and innovate graphic materials</div>
-            <Carousel className="CarouselContainer">
+          <div className="bigImageTitle">More Frames to be Released Post GA</div>
+            <Carousel className="CarouselContainer" autoplay>
               {/* <div>
                 <h3 style={contentStyle}>1</h3>
               </div>

@@ -7,7 +7,6 @@ import {Link} from "react-router-dom";
 import Footer from "./Footer";
 const Portal = () => {
   const portalList = React.useRef(null);
-  // const [logoLeft, setLogoLeft] = React.useState(0);
 
   const observerBtnRef = React.useRef(null);
   const btnRef = React.useRef(null);
@@ -16,8 +15,6 @@ const Portal = () => {
 
 
   React.useEffect(() => {
-    // console.log("portalList", portalList.current.getBoundingClientRect())
-    // setLogoLeft(portalList.current.getBoundingClientRect().right - 264)
     observerBtnRef.current = new IntersectionObserver(function(entries) {
       const isShow = entries[0].isIntersecting;
       setIsShow(!isShow)
@@ -47,16 +44,16 @@ const Portal = () => {
       <div className="App-Container">
         <div className="PortalTopContainer" >
             <div className="PortalTopTitle">
-                Every creator and creative need to be valued more
+                Every Creator and Creative Need to be Valued More
             </div>
-            <div className="Page-top-sub-title" style={{width: "622px"}}>The Microsoft creator center amplify the footprint of your brand and derive new value of your content</div>
+            <div className="Page-top-sub-title" style={{width: "622px"}}>The Microsoft Creator Center amplifies the footprint of your brand and derives new value of your content</div>
         </div>
         <div style={{width: "100vw", background: "#FAFAFA"}}>
           <div className="PortalCellContainer" ref={portalList} style={{background: "#FAFAFA"}}>
             <Image preview={false} className="iteImg" src={require("../images/‌integelent.png")}/>
             <div className="iteContent">
                 <div className="iteTitle">Creation intelligence</div>
-                <div className="iteBigTitle">Creation Intelligence</div>
+                <div className="iteBigTitle">Great Creatives, Simplified Work</div>
                 <div className="iteText">Create high quality content easily with trending topics, headline generator and mobile video creation tool.</div>
                 <div className="iteBtn" onClick={() => linkInteRef.current.click()}><Link ref={linkInteRef} to={"/Intelligence"}>Try now</Link></div>
             </div>
@@ -75,17 +72,14 @@ const Portal = () => {
                 <div className="bizCellTitle">Ads</div>  
                 <div className="bizCellSubTitle">Run MSFT Ads on website and gain revenue share</div>
                 <ul className="bizCellList">
-                  <li>N/A</li>
-                  <li>N/A</li>
-                  <li>N/A</li>
+                  <li>Ads revenue share</li>
                 </ul>
               </div>
               <div className="bizCell">
                 <div className="bizCellTitle">Light</div>  
                 <div className="bizCellSubTitle">Show contents on MSFT and gain referral traffic</div>
                 <ul className="bizCellList">
-                  <li>Search and feed</li>
-                  <li>N/A</li>
+                  <li>Traffic on search and feed</li>
                   <li>Referral traffic</li>
                   <li>Ads revenue share</li>
                 </ul>
@@ -95,9 +89,10 @@ const Portal = () => {
                 <div className="bizCellSubTitle">License contents to MSFT for distribution and monetization</div>
                 <ul className="bizCellList">
                   <li>Unlimited traffic on search and feed</li>
-                  <li>Brand homepage</li>
-                  <li>Followers</li>
-                  <li>Higher rate of Ads revenue share</li>
+                  <li>Referral traffic</li>
+                  <li>Branding homepage</li>
+                  <li>Followers/comments/likes</li>
+                  <li>Higher ratio of Ads revenue share</li>
                   <li>Reader support</li>
                   <li>Subscription</li>
                 </ul>

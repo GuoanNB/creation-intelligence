@@ -85,7 +85,7 @@ const Main = () => {
       <div className="App-Container">
         <div  className="Page-top-area-container" >
           <div className="Page-top-area-title">
-          Intelligence empowers creators
+          Intelligence Empowers Creators
           </div>
           <div className="Page-top-sub-title">Microsoft intelligence home helps users to create content and advertise.</div>
           <div id="topContainer" className="Page-top-cubes-container" ref={topContainerRef}>

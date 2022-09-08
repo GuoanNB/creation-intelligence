@@ -38,7 +38,7 @@ const TopTraffic = () => {
       </header>
       <div className="TopsCells">
           <div className="HeadlinesTopAreaContainer">
-              <div className="TopTitle">Top traffic headlines optimized in recent 4 weeks</div>
+              <div className="TopTitle">Top lift headlines gain estimation</div>
               <div className="TopSubTitle">The headlines automatically launches A/B testing to reach a best title, quickly finding the most click-worthy headline for your content to get more interaction instead of visitors leaving. See how much your contents are improved.</div>
           </div>
 
