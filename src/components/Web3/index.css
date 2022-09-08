@@ -161,6 +161,7 @@
     background-size: cover;
 }
 .footer {
+    margin-top: 100px;
     height: 55px;
     font-size: 18px;
     font-weight: 400;
