@@ -155,8 +155,13 @@
     width: 433px;
     background-size: cover;
 }
-
+.web3ImgContainer2 img {
+    height: 339px;
+    width: 462px;
+    background-size: cover;
+}
 .footer {
+    margin-top: 100px;
     height: 55px;
     font-size: 18px;
     font-weight: 400;

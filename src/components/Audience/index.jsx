@@ -9,7 +9,7 @@ const renderContent = (tabIndex) => {
             {list.map((item,index) => {
                 return (
                     <div key={item.title} className={`audience-item${index %2 === 1 ? " row-reverse" : ""}`}>
-                        <div>
+                        <div style={{paddingTop: item.img[item.img.length - 1] > 3 ? "25px" : 0}}>
                             <div className="audience-title">{item.title}</div>
                             <div className="audience-subtitle">{item.subTitle}</div>
                             {item.description.map(val => {

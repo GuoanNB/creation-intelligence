@@ -82,16 +82,18 @@ const TrendingTopic = () => {
                                 </div>,
                 msn: <div className={item.MsnContentSupply}>{contentSupplyTemplate(item.MsnContentSupply)}{item.MsnContentSupply}</div>,
                 description: <div className="sliderContainer">
-                    <div className="articleTitle">Articles realted to"{item.Topic}"</div>
+                    <div className="articleTitle">Articles related to "{item.Topic}"</div>
                     <Slider selectedIndex={0} onClick={()=> {}}>
                     {item.Items.map((subContent, index) => {
-                        return <div className="item" onClick={() => {openDoc(subContent.DocLink)}}>
+                        if(index < 3) {
+                            return <div className="item" onClick={() => {openDoc(subContent.DocLink)}}>
                             <img src={subContent.ImgUrl} alt="imge" />
                             <div className='itemContent'>
                                 <span>{subContent.Title}</span>
                             </div>
                             <div className='itemResource'>{subContent.Source}</div>
                         </div>
+                        } else {return null;}
                     })}
                     </Slider>
                 </div>,
