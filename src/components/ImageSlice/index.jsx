@@ -79,12 +79,16 @@ const ImageSlice = () => {
         </div>
         <div className="bigImageContainer">
           <div className="bigImageTitle">Microsoft Custom Filters empower Webinar creators to apply filters and frames via TEAMS meeting </div>
-          <Image
+          {/* <Image
             preview={false}
             width={900}
             height={507}
             src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/teams_demo.gif"
-          />
+          /> */}
+              <div>
+                <video width="900" height="507" controls  src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/teams_demo_video.mp4">
+                </video>
+              </div>
         </div>
         <div className="bigImageContainer">
           <div className="bigImageTitle">Rich and innovate graphic materials</div>
@@ -96,12 +100,10 @@ const ImageSlice = () => {
                 <h3 style={contentStyle}>2</h3>
               </div> */}
               <div>
-                <video width="100%" height="100%" controls preload src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/dynamic_frame.mp4">
+                <video width="100%" height="100%" controls  src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/dynamic_frame.mp4">
                 </video>
               </div>
-              {/* <div>
-                <h3 style={contentStyle}>4</h3>
-              </div> */}
+
             </Carousel>
         </div>
     </div>

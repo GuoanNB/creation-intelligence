@@ -32,7 +32,7 @@
 
   .App-logo > svg {
     position: relative;
-    top: 1px;
+    top: -1px;
     margin-right: 10px;
   }
 

@@ -118,7 +118,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div id={"trendingTopicExplorer"} className="trendingTopicExplorer" ref={trendingTopicExplorerRef}>
+        <div id={"trendingTopicExplorer"} className="section-container trendingTopicExplorer" ref={trendingTopicExplorerRef}>
           <TrendingTopic />
         </div>
         <div id="headlineGenerator" ref={headlineGeneratorRef} className="section-container">
