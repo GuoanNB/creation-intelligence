@@ -2,6 +2,7 @@ import './index.css';
 import React from 'react';
 import ImageCell from "./ImageCell";
 import { Image, Carousel } from 'antd';
+
 const SliceInner = ({index, title, context}) => {
     return <div className="innerContentWrapper">
     <div className="contentIndex">
@@ -43,7 +44,7 @@ const ImageSlice = () => {
         Provide video shooting, audio and video mixing, sticker effects, beautification filters and teleprompters, while supporting mobile, PC short video shooting, online conferences, webinars and other wide range of scenes, so that you stand out in video creation.
         </div>
         <div className="imgContainer">
-          <ImageCell isReversed={false} cardTitle={"01"} cardText={"Cut & Editing"} imageUrl={require("../../images/vedioA.png")} coverContent={
+          <ImageCell isReversed={false} cardTitle={"01"} cardText={"Cut & Editing"} imageUrl={require("../../images/vedio1.png")} coverContent={
             <SliceInner
             index={"01"}
             title={"Cut & Editing"}
@@ -65,9 +66,9 @@ const ImageSlice = () => {
             context={"Video/audio mixing during a recording or offline​"}
             />
             }
-            imageUrl={"https://is4-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/f9/26/69/f92669cb-c879-6685-7cd8-051928ff92ea/2404b510-b22f-4c12-9fb3-07c120c08745_screen3.png/460x0w.webp"}
+            imageUrl={require("../../images/vedio3.png")}  
           />
-          <ImageCell isReversed={true} cardTitle={"04"} cardText={"Teams webinar"} imageUrl={require("../../images/vedio3.png")} coverContent={
+          <ImageCell isReversed={true} cardTitle={"04"} cardText={"Teams webinar"} imageUrl={require("../../images/vedio4.png")} coverContent={
             <SliceInner
             index={"04"}
             title={"Teams webinar"}
