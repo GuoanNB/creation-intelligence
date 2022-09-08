@@ -13,7 +13,7 @@ const App = () => {
     <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/hackthon-demo/" element={<Main />}>
+        <Route path="/creation-intelligence" element={<Main />}>
         </Route>
         <Route path="/tops" element={<TopTraffic />} />
         <Route path="/web3" element={<Web3 />} />
