@@ -83,12 +83,12 @@ const Main = () => {
 
       </header>
       <div className="App-Container">
-        <div id="topContainer" className="Page-top-area-container" ref={topContainerRef}>
+        <div  className="Page-top-area-container" >
           <div className="Page-top-area-title">
           Intelligence empowers creators
           </div>
           <div className="Page-top-sub-title">Microsoft intelligence home helps users to create content and advertise.</div>
-          <div className="Page-top-cubes-container">
+          <div id="topContainer" className="Page-top-cubes-container" ref={topContainerRef}>
             {/* <div  className="Page-top-cube-border"> */}
               <div className="Page-top-cube" onClick={() => {
                 trendingTopicExplorerRef.current.scrollIntoView();
