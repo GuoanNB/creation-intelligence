@@ -2,7 +2,6 @@ import "./index.css"
 
 import { Button, Input, Tooltip, message } from "antd";
 
-import { Link } from "react-router-dom";
 import React from "react";
 import TabBar from "../TabBar";
 import { arrowGraySVG, arrowGreenSVG } from "../../Icons/svg";
@@ -49,7 +48,7 @@ const HeadlineGenerator = () => {
         sampleContentIndex = sampleContentIndex >= sampleContentList.length - 1 ? 0 : sampleContentIndex + 1
     }
     const onCustomizeConfirm = () => {
-        if (wordsNumber <= 200) {
+        if (wordsNumber < 200) {
             message.error("At least 200 words are required")
         } else {
             setShowLoading1(true)
