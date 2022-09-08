@@ -35,9 +35,7 @@ const HeadlineGenerator = () => {
 
     const handleTextAreaChange = (e) => {
         setWords(e.target.value)
-        if (resultBtnName !== "See results") {
-            setResultBtnName("See results")
-        }
+        setResultBtnName("See results")
     }
     const handleTabChange = (index) => {
         setTabIndex(index)
@@ -45,6 +43,7 @@ const HeadlineGenerator = () => {
     }
     const onSampleContent= () => {
         setWords(sampleContentList[sampleContentIndex])
+        setResultBtnName("See results")
         sampleContentIndex = sampleContentIndex >= sampleContentList.length - 1 ? 0 : sampleContentIndex + 1
     }
     const onCustomizeConfirm = () => {
@@ -55,7 +54,7 @@ const HeadlineGenerator = () => {
                 content_type: "text",
                 content: words
             }).then(res => {
-                setCustomizeSuggestionList(res.data.titles)
+                setCustomizeSuggestionList(res.data.data)
                 setResultBtnName("Try again")
             }).catch(() => {
                 message.error("Network error")
@@ -70,8 +69,9 @@ const HeadlineGenerator = () => {
                 content_type: "link",
                 content: url
             }).then(res => {
+                console.log('res', res)
                 setMsnResult(res.data)
-                setMsnSuggestionList(res.data.titles)
+                setMsnSuggestionList(res.data.data)
             }).catch(err => {
                 message.error(err.response.data.message || "Network error")
             })

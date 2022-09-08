@@ -1,0 +1,12 @@
+.audience-container {
+    padding: 30px 105px;
+}
+.audience-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.audience-img {
+    width: 510px !important;
+    height: 390px !important;
+}
