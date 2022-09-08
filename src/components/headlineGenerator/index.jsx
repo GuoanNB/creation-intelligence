@@ -26,6 +26,8 @@ const HeadlineGenerator = () => {
     const [customizeSuggestionList, setCustomizeSuggestionList] = React.useState([])
     const [msnSuggestionList, setMsnSuggestionList] = React.useState([])
     const [msnResult, setMsnResult] = React.useState({})
+    const [showLoading1, setShowLoading1] = React.useState(false)
+    const [showLoading2, setShowLoading2] = React.useState(false)
 
     React.useMemo(() => {
         const numberList = words.trim().split(/\s+/g)
@@ -50,13 +52,16 @@ const HeadlineGenerator = () => {
         if (wordsNumber <= 200) {
             message.error("At least 200 words are required")
         } else {
+            setShowLoading1(true)
             getSuggestionTitle({
                 content_type: "text",
                 content: words
             }).then(res => {
+                setShowLoading1(false)
                 setCustomizeSuggestionList(res.data.data)
                 setResultBtnName("Try again")
             }).catch(() => {
+                setShowLoading1(false)
                 message.error("Network error")
             })
         }
@@ -65,13 +70,16 @@ const HeadlineGenerator = () => {
         if (!/msn\.com/.test(url)) {
             message.error("Only MSN article is supported for now.")
         } else {
+            setShowLoading2(true)
             getSuggestionTitle({
                 content_type: "link",
                 content: url
             }).then(res => {
+                setShowLoading2(false)
                 setMsnResult(res.data)
                 setMsnSuggestionList(res.data.data)
             }).catch(err => {
+                setShowLoading2(false)
                 message.error(err.response.data.message || "Network error")
             })
         }
@@ -92,7 +100,7 @@ const HeadlineGenerator = () => {
                 <div className="words-number">{wordsNumber}</div>
                 <div className="btns">
                     <Button id="sample-btn" onClick={onSampleContent}>Sample content</Button>
-                    <Button id="primary-btn" type="primary" onClick={onCustomizeConfirm}>{resultBtnName}</Button>
+                    <Button id="primary-btn" loading={showLoading1} type="primary" onClick={onCustomizeConfirm}>{resultBtnName}</Button>
                 </div>
             </>
         )
@@ -106,7 +114,7 @@ const HeadlineGenerator = () => {
                     placeholder="Please enter here"
                     onChange={e => setUrl(e.target.value)}
                 />
-                <Button id="import-btn" type="primary" onClick={onMSNConfirm}>Import content</Button>
+                <Button id="import-btn" loading={showLoading2} type="primary" onClick={onMSNConfirm}>Import content</Button>
             </>
         )
     }
