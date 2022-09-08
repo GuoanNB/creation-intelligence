@@ -114,14 +114,14 @@ export default class Slider extends React.Component {
 
         return (
             <div className={classnames("mousex-slider", className)} style={style}>
-                <span
+                {/* <span
                     className={classnames("mousex-slider-btn-prev", {
                         "mousex-slider-btn-show": showBtnPrevNext,
                         "mousex-slider-btn-disabled": btnPrevDisabled
                     })}
                     onClick={this.handlePrev}>
                     <LeftOutlined className={"mousex-slider-btn-prev-icon"}/>
-                </span>
+                </span> */}
                 <div className={"mousex-slider-items-wrapper"} ref={this.wrapperRef}>
                     <div className={classnames("mousex-slider-items-scroller", "animated")} ref={this.scrollerRef}>
                         <div className={"mousex-slider-items-container"} ref={this.containerRef}>
@@ -141,14 +141,14 @@ export default class Slider extends React.Component {
                         </div>
                     </div>
                 </div>
-                <span
+                {/* <span
                     className={classnames("mousex-slider-btn-next", {
                         "mousex-slider-btn-show": showBtnPrevNext,
                         "mousex-slider-btn-disabled": btnNextDisabled
                     })}
                     onClick={this.handleNext}>
                     <RightOutlined className={"mousex-slider-btn-next-icon"}/>
-                </span>
+                </span> */}
             </div>
         );
     };
