@@ -145,14 +145,14 @@
 .subTitle img {
     height: 14px;
     width: 14px;
+    margin-right: 20px;
 }
 .web3ImgContainer {
-    height: 339px;
     height: 339px;
 }
 .web3ImgContainer img {
     height: 339px;
-    width: 339px;
+    width: 433px;
     background-size: cover;
 }
 
