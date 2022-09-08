@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/creation-intelligence/static/css/main.48ad638d.css",
-    "main.js": "/creation-intelligence/static/js/main.5c6b6eeb.js",
+    "main.css": "/creation-intelligence/static/css/main.d9ab4643.css",
+    "main.js": "/creation-intelligence/static/js/main.60dca872.js",
     "static/js/787.28cb0dcd.chunk.js": "/creation-intelligence/static/js/787.28cb0dcd.chunk.js",
     "static/media/TopBackImg.png": "/creation-intelligence/static/media/TopBackImg.f996b93fc3d8b2271fac.png",
     "static/media/background.png": "/creation-intelligence/static/media/background.1c1c0a04f8ca6d5fb704.png",
-    "static/media/content-1.png": "/creation-intelligence/static/media/content-1.f3dc2447c572d22812b0.png",
+    "static/media/content-1.png": "/creation-intelligence/static/media/content-1.4a3e890b05d111b2cc2a.png",
     "static/media/content-5.png": "/creation-intelligence/static/media/content-5.33e31aa2174c28ad099b.png",
     "static/media/content-3.png": "/creation-intelligence/static/media/content-3.73a6f67ee3f29ac6c90f.png",
     "static/media/content-4.png": "/creation-intelligence/static/media/content-4.21455b60239570546c4e.png",
@@ -21,18 +21,19 @@
     "static/media/audience3.png": "/creation-intelligence/static/media/audience3.b1bdc8fd547ae2c9b4c9.png",
     "static/media/audience1.png": "/creation-intelligence/static/media/audience1.944493eb3080ac15cc32.png",
     "static/media/web3-backgroundNew.png": "/creation-intelligence/static/media/web3-backgroundNew.a600915935d4a3c4ac5a.png",
+    "static/media/audienceBg.png": "/creation-intelligence/static/media/audienceBg.af14611e2fc6e7287e80.png",
     "static/media/Incentives.png": "/creation-intelligence/static/media/Incentives.917c50602cd9731b975b.png",
     "static/media/wallet.png": "/creation-intelligence/static/media/wallet.238faef9aa859348ddd3.png",
     "static/media/BigRocket.png": "/creation-intelligence/static/media/BigRocket.1508f27290b2f8ce0c0c.png",
     "static/media/audience5.png": "/creation-intelligence/static/media/audience5.ac4f516c681bb89fc063.png",
     "static/media/audience4.png": "/creation-intelligence/static/media/audience4.095bd35e91219200cccd.png",
     "index.html": "/creation-intelligence/index.html",
-    "main.48ad638d.css.map": "/creation-intelligence/static/css/main.48ad638d.css.map",
-    "main.5c6b6eeb.js.map": "/creation-intelligence/static/js/main.5c6b6eeb.js.map",
+    "main.d9ab4643.css.map": "/creation-intelligence/static/css/main.d9ab4643.css.map",
+    "main.60dca872.js.map": "/creation-intelligence/static/js/main.60dca872.js.map",
     "787.28cb0dcd.chunk.js.map": "/creation-intelligence/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48ad638d.css",
-    "static/js/main.5c6b6eeb.js"
+    "static/css/main.d9ab4643.css",
+    "static/js/main.60dca872.js"
   ]
 }
