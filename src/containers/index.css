@@ -87,7 +87,7 @@
   .section-container {
       width: 100%;
       height: auto;
-      margin-bottom: 120px;
+      padding-top: 120px;
   }
   .Section-title {
     font-weight: 400;
@@ -102,7 +102,7 @@
     text-align: center;
   }
   .Active-section-title {
-    background-image: linear-gradient(to right,  #F4A628, #f3ef0a, #FD7C2A, #FD7C2A, #f88603, #e2ad00, #F4A628, #00E2C8);
+    background-image: linear-gradient(to right,  #F4A628, #A829FE, #FD7C2A, #00E2C8, #F4A628, #00E2C8);
     color :transparent; 
     background-clip:text;
     position: relative;
