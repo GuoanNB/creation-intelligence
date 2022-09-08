@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/creation-intelligence/static/css/main.0901688b.css",
-    "main.js": "/creation-intelligence/static/js/main.80b31e2b.js",
+    "main.css": "/creation-intelligence/static/css/main.8cc71a15.css",
+    "main.js": "/creation-intelligence/static/js/main.8993dc0e.js",
     "static/js/787.28cb0dcd.chunk.js": "/creation-intelligence/static/js/787.28cb0dcd.chunk.js",
-    "static/media/TopBackImg.png": "/creation-intelligence/static/media/TopBackImg.f996b93fc3d8b2271fac.png",
     "static/media/background.png": "/creation-intelligence/static/media/background.1c1c0a04f8ca6d5fb704.png",
     "static/media/content-1.png": "/creation-intelligence/static/media/content-1.4a3e890b05d111b2cc2a.png",
+    "static/media/TopBackImg.png": "/creation-intelligence/static/media/TopBackImg.1ae6c1a268c1307a81bf.png",
+    "static/media/HeadlineBack.png": "/creation-intelligence/static/media/HeadlineBack.6c6400b6cfd7048e7541.png",
     "static/media/content-5.png": "/creation-intelligence/static/media/content-5.33e31aa2174c28ad099b.png",
     "static/media/content-3.png": "/creation-intelligence/static/media/content-3.73a6f67ee3f29ac6c90f.png",
     "static/media/content-4.png": "/creation-intelligence/static/media/content-4.21455b60239570546c4e.png",
     "static/media/content-2.png": "/creation-intelligence/static/media/content-2.9c200e914f4ddeef4a6b.png",
+    "static/media/vedio2.png": "/creation-intelligence/static/media/vedio2.ef18d3b82dedb911d4de.png",
     "static/media/web3-background.png": "/creation-intelligence/static/media/web3-background.4900010514cbe525700a.png",
-    "static/media/vedio2.png": "/creation-intelligence/static/media/vedio2.3bf8674efc2c4e403435.png",
+    "static/media/vedio4.png": "/creation-intelligence/static/media/vedio4.6f1fb2987da7eb6ad562.png",
     "static/media/example.png": "/creation-intelligence/static/media/example.f453ac95b0c61c539415.png",
-    "static/media/vedio3.png": "/creation-intelligence/static/media/vedio3.b184814b5882a36b98fc.png",
+    "static/media/vedio1.png": "/creation-intelligence/static/media/vedio1.b226fc0e152f6a7bb0bf.png",
+    "static/media/vedio3.png": "/creation-intelligence/static/media/vedio3.8d4cb825dccdefcd5c29.png",
     "static/media/vedioA.png": "/creation-intelligence/static/media/vedioA.e239add89eacf665c851.png",
     "static/media/‌integelent.png": "/creation-intelligence/static/media/‌integelent.610856cefcb1eb3570fb.png",
     "static/media/audience2.png": "/creation-intelligence/static/media/audience2.258723c43bb3a0c6442d.png",
@@ -24,16 +27,17 @@
     "static/media/audienceBg.png": "/creation-intelligence/static/media/audienceBg.af14611e2fc6e7287e80.png",
     "static/media/Incentives.png": "/creation-intelligence/static/media/Incentives.917c50602cd9731b975b.png",
     "static/media/audience5.png": "/creation-intelligence/static/media/audience5.8f5e64e262199663df53.png",
-    "static/media/wallet.png": "/creation-intelligence/static/media/wallet.238faef9aa859348ddd3.png",
+    "static/media/wallet.png": "/creation-intelligence/static/media/wallet.edd734f5d5b32142cf9a.png",
     "static/media/audience4.png": "/creation-intelligence/static/media/audience4.788a56d598b960490a15.png",
+    "static/media/intTopBack.png": "/creation-intelligence/static/media/intTopBack.b08456cee699765a0f1c.png",
     "static/media/BigRocket.png": "/creation-intelligence/static/media/BigRocket.1508f27290b2f8ce0c0c.png",
     "index.html": "/creation-intelligence/index.html",
-    "main.0901688b.css.map": "/creation-intelligence/static/css/main.0901688b.css.map",
-    "main.80b31e2b.js.map": "/creation-intelligence/static/js/main.80b31e2b.js.map",
+    "main.8cc71a15.css.map": "/creation-intelligence/static/css/main.8cc71a15.css.map",
+    "main.8993dc0e.js.map": "/creation-intelligence/static/js/main.8993dc0e.js.map",
     "787.28cb0dcd.chunk.js.map": "/creation-intelligence/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0901688b.css",
-    "static/js/main.80b31e2b.js"
+    "static/css/main.8cc71a15.css",
+    "static/js/main.8993dc0e.js"
   ]
 }
