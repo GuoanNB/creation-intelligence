@@ -26,7 +26,7 @@ export const getTredingTopics = (data = {}) => {
 
 export const getRecently7days = () => {
     let days = [];
-    for(let i = 1; i < 8; i++) {
+    for(let i = 1; i < 7; i++) {
         days.push(getFormatDay(i))
     }
     return days;

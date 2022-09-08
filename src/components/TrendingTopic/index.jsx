@@ -1,6 +1,6 @@
 import './index.css';
 import React from 'react';
-import { Table } from 'antd';
+import { Table, message } from 'antd';
 import 'antd/dist/antd.min.css';
 import Slider  from './slider';
 import Scarce from '../../images/Scarce.png';
@@ -28,6 +28,8 @@ const contentSupplyTemplate = (status) => {
             return <img src={Moderate} alt="scarce" />
         case 'Saturated': 
             return <img src={Saturated} alt="scarce" />
+        case 'Sarurated':
+            return <img src={Saturated} alt="scarce" />
         default: 
             return null
     }
@@ -51,7 +53,7 @@ const TrendingTopic = () => {
     const [ dataActiveIndex, setDateActiveIndex ] = React.useState(0);
     const [ verticalActiveIndex, setVerticalActiveIndex ] = React.useState(0);
     const [ trendTopic, setTrendTopic] = React.useState([]);
-    const [loading, setLoading ] = React.useState(false);
+    const [loading, setLoading ] = React.useState(true);
     const dateClick = (index) => {
         setDateActiveIndex(index);
         getRealTableData();
@@ -94,18 +96,24 @@ const TrendingTopic = () => {
         })
     }
     const getRealTableData = useSyncCallback(() => {
+        setLoading(true);
         getTredingTopics({
             date: days[dataActiveIndex].yDate,
             vertical: verticals[verticalActiveIndex]
         }).then((json)=> {
-            revertData(tableData);
+            console.log("JSON",json.data, typeof(json.data));
+            const trendTopic = revertData(json.data);
+            setTrendTopic(trendTopic);
             setLoading(false);
+        }).catch((err) => {
+            message.error("trendTopic api error");
+            setLoading(false)
         })
     })
 
     React.useEffect(() => {
-        const trendTopic = revertData(tableData);
-        setTrendTopic(trendTopic);
+        // const trendTopic = revertData(tableData);
+        // setTrendTopic(trendTopic);
         getRealTableData();
     }, []);
 
