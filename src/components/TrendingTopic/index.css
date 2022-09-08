@@ -342,3 +342,13 @@
     background-size: contain;
     margin-right: 12px;
 }
+
+.ant-table-thead > tr >th{    
+    background: #F3F3F3 !important;
+}
+.ant-table-thead > tr > th:first-child {
+    border-top-left-radius: 8px !important;
+}
+.ant-table-thead > tr > th:nth-child(4) {
+    border-top-right-radius: 8px !important;
+}
