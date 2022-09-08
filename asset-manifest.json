@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/creation-intelligence/static/css/main.d9ab4643.css",
-    "main.js": "/creation-intelligence/static/js/main.48df6f10.js",
+    "main.css": "/creation-intelligence/static/css/main.0901688b.css",
+    "main.js": "/creation-intelligence/static/js/main.80b31e2b.js",
     "static/js/787.28cb0dcd.chunk.js": "/creation-intelligence/static/js/787.28cb0dcd.chunk.js",
     "static/media/TopBackImg.png": "/creation-intelligence/static/media/TopBackImg.f996b93fc3d8b2271fac.png",
     "static/media/background.png": "/creation-intelligence/static/media/background.1c1c0a04f8ca6d5fb704.png",
@@ -18,22 +18,22 @@
     "static/media/‌integelent.png": "/creation-intelligence/static/media/‌integelent.610856cefcb1eb3570fb.png",
     "static/media/audience2.png": "/creation-intelligence/static/media/audience2.258723c43bb3a0c6442d.png",
     "static/media/audience0.png": "/creation-intelligence/static/media/audience0.dcaf0b23b1d4402d088a.png",
-    "static/media/audience5.png": "/creation-intelligence/static/media/audience5.164dd316367d4f53d54f.png",
     "static/media/audience3.png": "/creation-intelligence/static/media/audience3.b1bdc8fd547ae2c9b4c9.png",
     "static/media/audience1.png": "/creation-intelligence/static/media/audience1.944493eb3080ac15cc32.png",
     "static/media/web3-backgroundNew.png": "/creation-intelligence/static/media/web3-backgroundNew.a600915935d4a3c4ac5a.png",
-    "static/media/audience4.png": "/creation-intelligence/static/media/audience4.199c2eafdfd51bb26710.png",
     "static/media/audienceBg.png": "/creation-intelligence/static/media/audienceBg.af14611e2fc6e7287e80.png",
     "static/media/Incentives.png": "/creation-intelligence/static/media/Incentives.917c50602cd9731b975b.png",
+    "static/media/audience5.png": "/creation-intelligence/static/media/audience5.8f5e64e262199663df53.png",
     "static/media/wallet.png": "/creation-intelligence/static/media/wallet.238faef9aa859348ddd3.png",
+    "static/media/audience4.png": "/creation-intelligence/static/media/audience4.788a56d598b960490a15.png",
     "static/media/BigRocket.png": "/creation-intelligence/static/media/BigRocket.1508f27290b2f8ce0c0c.png",
     "index.html": "/creation-intelligence/index.html",
-    "main.d9ab4643.css.map": "/creation-intelligence/static/css/main.d9ab4643.css.map",
-    "main.48df6f10.js.map": "/creation-intelligence/static/js/main.48df6f10.js.map",
+    "main.0901688b.css.map": "/creation-intelligence/static/css/main.0901688b.css.map",
+    "main.80b31e2b.js.map": "/creation-intelligence/static/js/main.80b31e2b.js.map",
     "787.28cb0dcd.chunk.js.map": "/creation-intelligence/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9ab4643.css",
-    "static/js/main.48df6f10.js"
+    "static/css/main.0901688b.css",
+    "static/js/main.80b31e2b.js"
   ]
 }
