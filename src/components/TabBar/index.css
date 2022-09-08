@@ -18,6 +18,8 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-family: 'Segoe UI Variable Static Text';
+    font-style: normal;
 }
 .active {
     position: relative;
