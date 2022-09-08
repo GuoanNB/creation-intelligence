@@ -203,6 +203,7 @@
 .number1 {
     font-weight: 600;
     font-size: 14px;
+    width: 60px;
 }
 .number1, .number2, .number3, .number4 {
     margin-left: -18px;
@@ -290,6 +291,7 @@
 }
 .notNumber1 {
     font-weight: 400;
+    width: 60px;
 }
 .Scarce {
     display: flex;
