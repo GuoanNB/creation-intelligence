@@ -224,3 +224,51 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+
+.PortalTopContainer{
+  width: 100vw;
+  height: 441px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../public/TopBackImg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 113px;
+}
+
+.PortalTopTitle {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  width: 708px;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  background-image: linear-gradient(to right,  #F4A628,  #FD7C2A, #c9662d,#ffe601, #15e6a7, #00E2C8, #F4A628,  #FD7C2A, #c9662d,#ffe601 );
+  color :transparent; 
+  background-clip:text;
+  margin-bottom: 30px;
+}
+
+.PortalCellContainer {
+  width: 992px;
+  height: 680px;
+  background: green;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.StaticLogo {
+  width: 264px;
+  height: 90px;
+  background: #FFFFFF;
+  position: fixed;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.14);
+  border-radius: 20px;
+}

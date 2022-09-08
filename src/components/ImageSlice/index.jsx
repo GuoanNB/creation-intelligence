@@ -63,7 +63,9 @@ const ImageSlice = () => {
             title={"Telepromoter"}
             context={""}
             />
-          }/>
+            }
+            imageUrl={"https://is4-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/f9/26/69/f92669cb-c879-6685-7cd8-051928ff92ea/2404b510-b22f-4c12-9fb3-07c120c08745_screen3.png/460x0w.webp"}
+          />
           <ImageCell isReversed={true} cardTitle={"04"} cardText={"Teams webinar"} coverContent={
             <SliceInner
             index={"04"}
