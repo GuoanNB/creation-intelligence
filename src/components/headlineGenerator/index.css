@@ -26,8 +26,8 @@ div {
     line-height: 34px;
     color: #1A1A1A;
 }
-.headline-title{
-    background-image: radial-gradient( #FD7C2A, #fc7a00, #f7de01, #F4A628, #00E2C8, #A829FE);
+.headline-title {
+    background-image: radial-gradient( #F4A628, #16534c, #FD7C2A, #A829FE);
     color :transparent; 
     background-clip:text;
     font-family: 'Inter';
@@ -160,6 +160,7 @@ div {
     color: #333333;
 }
 .number-container {
+    min-width: 52px;
     display: flex;
     align-items: center;
     gap: 5px;

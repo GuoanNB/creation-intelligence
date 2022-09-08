@@ -43,7 +43,7 @@ const searchVolumnTemplate = (status) => {
         case 'New': 
             return <span className='new'>New</span>
         case 'None':
-            return <img className='None' src={parallel} alt='none' />
+            return <img src={parallel} alt='none' />
         default: 
             return null;
     }
