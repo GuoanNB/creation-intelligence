@@ -91,6 +91,14 @@ const ImageSlice = () => {
               </div>
         </div>
         <div className="bigImageContainer">
+          <div className="bigImageTitle">Video core capability exploring landed in TEAMS and in process of Ignite and GA (mid Oct)</div>
+              <div>
+                <video width="900" height="507" controls src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/dynamic_frame.mp4">
+                </video>
+              </div>
+        </div>
+
+        <div className="bigImageContainer">
           <div className="bigImageTitle">Rich and innovate graphic materials</div>
             <Carousel className="CarouselContainer">
               {/* <div>
@@ -99,11 +107,54 @@ const ImageSlice = () => {
               <div>
                 <h3 style={contentStyle}>2</h3>
               </div> */}
-              <div>
-                <video width="100%" height="100%" controls  src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/dynamic_frame.mp4">
-                </video>
-              </div>
-
+            <div>
+              <Image
+                preview={false}
+                width={900}
+                height={507}
+                src={require("../../images/slide1.png")}
+              />
+            </div>
+            <div>
+              <Image
+                preview={false}
+                width={900}
+                height={507}
+                src={require("../../images/slide2.png")}
+              />
+            </div>
+            <div>
+              <Image
+                preview={false}
+                width={900}
+                height={507}
+                src={require("../../images/slide3.png")}
+              />
+            </div>
+            <div>
+              <Image
+                preview={false}
+                width={900}
+                height={507}
+                src={require("../../images/slide4.png")}
+              />
+            </div>
+            <div>
+              <Image
+                preview={false}
+                width={900}
+                height={507}
+                src={require("../../images/slide5.png")}
+              />
+            </div>
+            <div>
+              <Image
+                preview={false}
+                width={900}
+                height={507}
+                src={require("../../images/slide6.png")}
+              />
+            </div>
             </Carousel>
         </div>
     </div>
