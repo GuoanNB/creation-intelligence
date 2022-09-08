@@ -34,7 +34,7 @@ const Web3 = () => {
                 </div>
             </div>
             <div className='itemContainer'>
-            <div className='web3ImgContainer'>
+            <div className='web3ImgContainer2'>
                     <img src={content2} alt='content-1' />
                 </div>
                 <div className="title">
@@ -52,7 +52,7 @@ const Web3 = () => {
                 </div>
             </div>
             <div className='itemContainer'>
-            <div className='web3ImgContainer'>
+            <div className='web3ImgContainer2'>
                     <img src={content4} alt='content-4' />
                 </div>
                 <div className="title">
@@ -65,7 +65,7 @@ const Web3 = () => {
                     <p className="mainTitle">Launch your creator economy</p>
                     <p className="subTitle"><img src={ liIcon } alt='li-icon' />Create your coin and reward your community</p>
                 </div>
-                <div className='web3ImgContainer'>
+                <div className='web3ImgContainer2'>
                     <img src={content5} alt='content-3' />
                 </div>
             </div>
