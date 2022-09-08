@@ -22,6 +22,9 @@ const Portal = () => {
       setIsShow(!isShow)
     }, {threshold: [0, 0.1,  0.25, 0.5, 0.75, 1]});
     observerBtnRef.current.observe(btnRef.current);
+    return () => {
+      observerBtnRef?.current?.disconnect();
+    }
   }, [])
 
 
@@ -137,7 +140,7 @@ const Portal = () => {
 
       </div>
       
-      {isShowRoc && <div className="StaticLogo" style={{left: logoLeft}}>
+      {isShowRoc && <div className="StaticLogo" style={{right: "200px"}}>
         <Image preview={false} className="iteImg" src={require("../images/Rocket.png")}/>
         <Link to={"/web3"}><div className="staticLogoText">More benefits in <span style={{fontWeight: "600"}}>Web3</span></div>
         </Link>
