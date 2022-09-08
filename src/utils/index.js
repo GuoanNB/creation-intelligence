@@ -82,7 +82,7 @@ export const newsLetterList = [
         subTitle: "Fully control of contents and subscribers",
         img: "audience0",
         description: [
-            "Create what you want and what your audience loves. You don’t have to conform to popular taste",
+            "Create what you want and what your audience loves. You don't have to conform to popular taste",
             "Make your audience the private property"
         ]
     },
