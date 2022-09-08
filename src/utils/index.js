@@ -80,6 +80,7 @@ export const newsLetterList = [
     {
         title: "Ownership",
         subTitle: "Fully control of contents and subscribers",
+        img: "audience0",
         description: [
             "Create what you want and what your audience loves. You don’t have to conform to popular taste",
             "Make your audience the private property"
@@ -88,6 +89,7 @@ export const newsLetterList = [
     {
         title: "Grow",
         subTitle: "Grow audience with global Microsoft users",
+        img: "audience1",
         description: [
             "Promote your content and grow your audience on Microsoft surfaces, Windows, Outlook, Edge, Bing. Be prepared for your global fans!"
         ]
@@ -95,6 +97,7 @@ export const newsLetterList = [
     {
         title: "Free",
         subTitle: "Free to use with extra bonus on your growth",
+        img: "audience2",
         description: [
             "Free to use before you gain first $100,000",
             "$100 bonus on your growth milestones"
@@ -103,6 +106,7 @@ export const newsLetterList = [
     {
         title: "Income",
         subTitle: "Reoccurring income on subscription",
+        img: "audience3",
         description: [
             "Stop rolling the dice of ad revenue and per-stream payouts. Get recurring income through monthly payments from your subscribers",
             "Supporting 16 currencies across 108 regions"
@@ -113,6 +117,7 @@ export const discordList = [
     {
         title: "Secure",
         subTitle: "Secure your followers into private property",
+        img: "audience4",
         description: [
             "Migrate your followers to de-centralized and democratic web where you have more control with little platforms intervene"
         ]
@@ -120,6 +125,7 @@ export const discordList = [
     {
         title: "Paid community",
         subTitle: "Build your paid Discord server",
+        img: "audience5",
         description: [
             "Set up a price for your private Discord servers, you make income and make your audience happier.",
             "NFT payment tap your business early to Web3"

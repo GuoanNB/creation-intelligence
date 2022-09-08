@@ -1,12 +1,97 @@
 .audience-container {
-    padding: 30px 105px;
+    padding: 30px 0;
+}.audience-content {
+    padding: 0 105px;
 }
 .audience-item {
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
 }
+.audience-title {
+    text-align: start;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    background-image: linear-gradient(to right, #F4A628, #16534c, #FD7C2A, #A829FE);
+    color :transparent; 
+    background-clip:text;
+}
+.audience-subtitle {
+    text-align: start;
+    margin: 10px 0 16px;
+    width: 500px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    color: #1A1A1A;
+}
+.audience-description {
+    text-align: start;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.audience-description >img {
+    margin-top: 6px;
+    width: 10px;
+    height: 12px;
+}
+.audience-description >span {
+    width: 460px;
+}
+.audience-footer {
+    height: 250px;
+    background: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+}
+.audience-footer-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #1A1A1A;
+}
+.audience-btn {
+    width: 200px;
+    height: 42px;
+    margin-top: 32px;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, #F4A628, #FD7C2A, #A829FE);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI Variable Static Text';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.more {
+    margin-top: 20px;
+    font-family: 'Segoe UI Variable Static Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #1A1A1A;
+    cursor: pointer;
+}
+.row-reverse {
+    flex-direction: row-reverse;
+}
 .audience-img {
-    width: 510px !important;
-    height: 390px !important;
+    width: 390px;
+    height: 300px;
 }
