@@ -10,6 +10,8 @@ import Saturated from '../../images/Saturated.png';
 import downArrow from '../../images/down-arrow.png';
 import down from '../../images/down.png';
 import parallel from '../../images/parallel.png';
+import expand from '../../images/expand.png';
+import fold from '../../images/fold.png';
 import { getRecently7days, getTredingTopics, tableData, useSyncCallback } from '../../utils';
 import classNames from 'classnames';
 const days = getRecently7days();
@@ -161,9 +163,13 @@ const TrendingTopic = () => {
                 rowExpandable: record => record.name !== 'Not Expandable',
                 expandIcon: ({ expanded, onExpand, record }) =>
                 expanded ? (
-                <div className='expand' onClick={e => onExpand(record, e)} />
+                <div className='expand' onClick={e => onExpand(record, e)} >
+                    <img src={expand} alt="expand" />
+                </div>
                 ) : (
-                <div className='fold' onClick={e => onExpand(record, e)} />
+                <div className='fold' onClick={e => onExpand(record, e)} >
+                    <img src={fold} alt="fold" />
+                </div>
                 )
               }}
               dataSource={trendTopic}

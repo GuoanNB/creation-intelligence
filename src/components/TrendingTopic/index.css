@@ -99,14 +99,22 @@
     white-space: nowrap; 
     text-overflow: ellipsis;
 }
-.expand {
+.expand, .fold {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.expand img {
     width: 12px;
     height: 7px;
     background-image: url('../../images/expand.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
-.fold {
+
+.fold img {
     width: 12px;
     height: 7px;
     background-image: url('../../images/fold.png');
@@ -139,6 +147,7 @@
     color: #333333;
 }
 .itemContent > span {
+    height: 60px;
     display: -webkit-box;
     overflow: hidden;
     white-space: normal !important;
