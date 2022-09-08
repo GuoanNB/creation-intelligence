@@ -26,7 +26,7 @@ export const getTredingTopics = (data = {}) => {
 
 export const getRecently7days = () => {
     let days = [];
-    for(let i = 1; i < 8; i++) {
+    for(let i = 1; i < 7; i++) {
         days.push(getFormatDay(i))
     }
     return days;
@@ -69,6 +69,7 @@ export const useSyncCallback = callback => {
 
     return Func
 }
+export const sampleContentList = ["123", "456"]
 export const tableData = [
     {
         "Topic": "Family Day",

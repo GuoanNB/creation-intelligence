@@ -9,7 +9,7 @@ export const Logo = () => <svg width="95" height="20" viewBox="0 0 95 20" fill="
 export const Start = (isActive, size = 20) => <svg width={size} height={size} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="Gradient1">
-        <stop stopColor="#e6f428" offset="0%"/>
+        <stop stopColor="#A829FE" offset="0%"/>
         <stop stopColor="#FD7C2A" offset="25%"/>
         <stop stopColor="#F4A628" offset="75%"/>
         <stop stopColor="#00E2C8" offset="100%"/>
@@ -24,7 +24,7 @@ fill={isActive ? "url(#Gradient1)" : "white"}/>
 export const Shape = (isActive,  size = 16) => <svg width={size} height={size} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="Gradient1">
-        <stop stopColor="#e6f428" offset="0%"/>
+        <stop stopColor="#A829FE" offset="0%"/>
         <stop stopColor="#FD7C2A" offset="25%"/>
         <stop stopColor="#F4A628" offset="75%"/>
         <stop stopColor="#00E2C8" offset="100%"/>
@@ -38,7 +38,7 @@ fill={isActive ? "url(#Gradient1)" : "white"}/>
 export const NameCard = (isActive,  size = 19) => <svg width={size} height={size} viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="Gradient1">
-        <stop stopColor="#e6f428" offset="0%"/>
+        <stop stopColor="#A829FE" offset="0%"/>
         <stop stopColor="#FD7C2A" offset="25%"/>
         <stop stopColor="#F4A628" offset="75%"/>
         <stop stopColor="#00E2C8" offset="100%"/>
@@ -51,3 +51,5 @@ fill={isActive ? "url(#Gradient1)" : "white"}/>
 export const Triangle = () => <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.78633 1.45866C6.43733 0.847113 5.56266 0.847113 5.21367 1.45866L1.12237 8.62781C0.774094 9.23809 1.2107 10 1.9087 10H1.9365L1.94138 10H10.0576L10.0625 10H10.0913C10.7893 10 11.2259 9.23809 10.8776 8.62781L6.78633 1.45866Z" fill="#0F7B0F"/>
 </svg>
+
+

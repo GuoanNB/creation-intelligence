@@ -7,14 +7,17 @@ import Main from "./containers/Main";
 import React from 'react';
 import TopTraffic from "./containers/TopTraffic";
 import Portal from "./containers/Portal";
+import Web3 from './components/Web3';
+
 const App = () => {
   return (
     <React.StrictMode>
-    <BrowserRouter  basename="/hackthon-demo">
+    <BrowserRouter basename="/creation-intelligence">
       <Routes>
         <Route path="/" element={<Portal />}/>
         <Route path="/Intelligence" element={<Main />}/>
         <Route path="/tops" element={<TopTraffic />} />
+        <Route path="/web3" element={<Web3 />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
