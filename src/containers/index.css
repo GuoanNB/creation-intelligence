@@ -319,7 +319,7 @@
   color :transparent; 
   background-clip:text;
   background-image: linear-gradient(to right,  #f700ff,  #7700ff, #00eeff,#c401ff);
-  width: 156px;
+  /* width: 156px; */
   text-align: left;
   margin-left: 8px;
 }
