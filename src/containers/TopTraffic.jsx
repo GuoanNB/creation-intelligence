@@ -4,6 +4,7 @@ import TopTitleCell from "../components/TopTitleCell";
 import { Skeleton } from 'antd';
 import { getTopHeadlines } from "../utils"
 import { Logo } from './assets';
+import Footer from "./Footer";
 const testData = {
         OriginHeadline: "Works worth millions donated to gallery in show of support", Headline: "Machine Gun Kelly and Mod Sun's Stoner Comedy Was Inspired by a Real-Life Event", PVLift: "21.5%", OriginCTR: "1.5%", OptimaizedCTR:"9.7%", ImgUrl: "https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
 }
@@ -20,7 +21,7 @@ const TopTraffic = () => {
   React.useEffect(() => {
     const getHeadlines = async () => {
       const {data} = await getTopHeadlines();
-      // console.log("res", data)
+      console.log("data", data)
       setList(data)
       setIsLoading(false);
     }
@@ -36,8 +37,8 @@ const TopTraffic = () => {
         </div>
       </header>
       <div className="TopsCells">
-          <div className="TopAreaContainer">
-              <div className="TopTitle">Top traffic headlines optimized in recent 4 weeks</div>
+          <div className="HeadlinesTopAreaContainer">
+              <div className="TopTitle">Top lift headlines gain estimation</div>
               <div className="TopSubTitle">The headlines automatically launches A/B testing to reach a best title, quickly finding the most click-worthy headline for your content to get more interaction instead of visitors leaving. See how much your contents are improved.</div>
           </div>
 
@@ -49,7 +50,7 @@ const TopTraffic = () => {
             </Skeleton>
 
           </div>
-
+            <Footer/>
       </div>
 
     </div>

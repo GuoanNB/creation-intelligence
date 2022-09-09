@@ -7,20 +7,29 @@ import HeadlineGenerator from "../components/HeadlineGenerator";
 import ImageSlice from "../components/ImageSlice";
 import React from 'react';
 import TrendingTopic from "../components/TrendingTopic";
+import Footer from "./Footer"
 
 const Main = () => {
   const trendingTopicExplorerRef = React.useRef(null);
   const headlineGeneratorRef = React.useRef(null);
   const videoEditingRef = React.useRef(null);
+  const topContainerRef = React.useRef(null);
+
 
   const observerRef = React.useRef(null);
 
   const [activeSection, setActiveSection] = React.useState({});
 
+  const [isShowNavi, setIsShowNavi] = React.useState(false);
+
+
   React.useEffect(() =>{
     observerRef.current = new IntersectionObserver(function(entries) {
       const tempRec = {};
       entries.forEach((entry) => {
+        if(entry.target.id === "topContainer") {
+          setIsShowNavi(!entry.isIntersecting)
+        } 
         tempRec[entry.target.id] = entry.intersectionRatio;
       })
       setActiveSection((prevState) => {
@@ -33,6 +42,10 @@ const Main = () => {
     observerRef.current.observe(headlineGeneratorRef.current);
     observerRef.current.observe(trendingTopicExplorerRef.current);
     observerRef.current.observe(videoEditingRef.current);
+    observerRef.current.observe(topContainerRef.current);
+    return ()=>{
+      observerRef.current.disconnect();
+    }
   }, []);
 
   const activeDom = React.useMemo(() => {
@@ -54,24 +67,28 @@ const Main = () => {
           {Logo()}
           Intelligence home
         </div>
-      <div className={`${activeDom === "trendingTopicExplorer" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
-        trendingTopicExplorerRef.current.scrollIntoView();
-      }}>{ Start(activeDom === "trendingTopicExplorer")}Trending topic explorer</div>
-      <div className={`${activeDom === "headlineGenerator" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
-        headlineGeneratorRef.current.scrollIntoView();
-      }}>{Shape(activeDom === "headlineGenerator")}Headline generator</div>
+       {isShowNavi && <>
+          <div className={`${activeDom === "trendingTopicExplorer" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
+          trendingTopicExplorerRef.current.scrollIntoView();
+              }}>{ Start(activeDom === "trendingTopicExplorer")}Trending topic explorer</div>
+              <div className={`${activeDom === "headlineGenerator" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
+              headlineGeneratorRef.current.scrollIntoView();
+            }}>{Shape(activeDom === "headlineGenerator")}Headline generator</div>
 
-      <div className={`${activeDom === "videoEditing" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
-        videoEditingRef.current.scrollIntoView();
-      }}>{ NameCard( activeDom === "videoEditing")} Video editing</div>
+            <div className={`${activeDom === "videoEditing" ? "Section-title Active-section-title" : "Section-title"}`} onClick={() => {
+              videoEditingRef.current.scrollIntoView();
+            }}>{ NameCard( activeDom === "videoEditing")} Video editing</div>
+        
+        </>}
+
       </header>
       <div className="App-Container">
-        <div className="Page-top-area-container">
+        <div  className="Page-top-area-container" >
           <div className="Page-top-area-title">
-          Intelligence empowers creators
+          Intelligence Empowers Creators
           </div>
           <div className="Page-top-sub-title">Microsoft intelligence home helps users to create content and advertise.</div>
-          <div className="Page-top-cubes-container">
+          <div id="topContainer" className="Page-top-cubes-container" ref={topContainerRef}>
             {/* <div  className="Page-top-cube-border"> */}
               <div className="Page-top-cube" onClick={() => {
                 trendingTopicExplorerRef.current.scrollIntoView();
@@ -101,7 +118,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div id={"trendingTopicExplorer"} className="trendingTopicExplorer" ref={trendingTopicExplorerRef}>
+        <div id={"trendingTopicExplorer"} className="section-container trendingTopicExplorer" ref={trendingTopicExplorerRef}>
           <TrendingTopic />
         </div>
         <div id="headlineGenerator" ref={headlineGeneratorRef} className="section-container">
@@ -110,6 +127,8 @@ const Main = () => {
         <div id={"videoEditing"} ref={videoEditingRef} className="section-container">
           <ImageSlice/>
         </div>
+        <Footer/>
+
       </div>
     </div>
   );
