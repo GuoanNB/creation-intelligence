@@ -14,7 +14,7 @@
 
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 13px;
@@ -218,4 +218,22 @@
 
     height: 507px;
     width: 900px;
+}
+
+.CarouselContainer .ant-carousel .slick-prev,
+.ant-carousel .slick-prev:hover {
+  left: 10px;
+  z-index: 2;
+  color: white;
+  font-size: 20px;
+  height: 30px;
+}
+
+.CarouselContainer .ant-carousel .slick-next,
+.ant-carousel .slick-next:hover {
+  right: 10px;
+  z-index: 2;
+  color: white;
+  font-size: 20px;
+  height: 30px;
 }

@@ -9,8 +9,6 @@ import TopTraffic from "./containers/TopTraffic";
 import Portal from "./containers/Portal";
 import Web3 from './components/Web3';
 import Audience from './components/Audience';
-
-
 const App = () => {
   return (
     <React.StrictMode>
@@ -23,7 +21,9 @@ const App = () => {
         <Route path="/Audience" element={<Audience />} />
 
       </Routes>
+
     </BrowserRouter>
+
   </React.StrictMode>
   );
 }

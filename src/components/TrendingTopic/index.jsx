@@ -86,7 +86,7 @@ const TrendingTopic = () => {
                     <Slider selectedIndex={0} onClick={()=> {}}>
                     {item.Items.map((subContent, index) => {
                         if(index < 3) {
-                            return <div className="item" onClick={() => {openDoc(subContent.DocLink)}}>
+                            return <div key={`${index}subContent`} className="item" onClick={() => {openDoc(subContent.DocLink)}}>
                             <img src={subContent.ImgUrl} alt="imge" />
                             <div className='itemContent'>
                                 <span>{subContent.Title}</span>
@@ -106,7 +106,6 @@ const TrendingTopic = () => {
             date: days[dataActiveIndex].yDate,
             vertical: verticals[verticalActiveIndex]
         }).then((json)=> {
-            console.log("JSON",json.data, typeof(json.data));
             const trendTopic = revertData(json.data);
             setTrendTopic(trendTopic);
             setLoading(false);
@@ -141,7 +140,7 @@ const TrendingTopic = () => {
             <div className="data">
               <span className='filterTitle'>Date:</span>
               {days.map((item, index) => {
-                return <span className={classNames({ 'selected': dataActiveIndex === index})} onClick={() => dateClick(index)}>
+                return <span key={`${index}filterTitleA`} className={classNames({ 'selected': dataActiveIndex === index})} onClick={() => dateClick(index)}>
                             {days[index].displayDate}
                         </span>
               })}
@@ -149,7 +148,7 @@ const TrendingTopic = () => {
             <div className="Vertical">
               <span className='filterTitle'>Vertical:</span>
               {verticals.map((item, index) => {
-                return <span className={classNames({ 'selected': verticalActiveIndex === index})} onClick={() => verticalClick(index)}>
+                return <span key={`${index}filterTitle`} className={classNames({ 'selected': verticalActiveIndex === index})} onClick={() => verticalClick(index)}>
                             {item}
                         </span>
               })}

@@ -2,6 +2,7 @@ import './index.css';
 import React from 'react';
 import ImageCell from "./ImageCell";
 import { Image, Carousel } from 'antd';
+
 const SliceInner = ({index, title, context}) => {
     return <div className="innerContentWrapper">
     <div className="contentIndex">
@@ -21,12 +22,6 @@ const SliceInner = ({index, title, context}) => {
 }
 
 
-const contentStyle = {
-  height: "507px",
-  width: "900px",
-  textAlign: 'center',
-  background: '#364d79',
-};
 
 const ImageSlice = () => {
 
@@ -43,7 +38,7 @@ const ImageSlice = () => {
         Provide video shooting, audio and video mixing, sticker effects, beautification filters and teleprompters, while supporting mobile, PC short video shooting, online conferences, webinars and other wide range of scenes, so that you stand out in video creation.
         </div>
         <div className="imgContainer">
-          <ImageCell isReversed={false} cardTitle={"01"} cardText={"Cut & Editing"} imageUrl={require("../../images/vedioA.png")} coverContent={
+          <ImageCell isReversed={false} cardTitle={"01"} cardText={"Cut & Editing"} imageUrl={require("../../images/vedio1.png")} coverContent={
             <SliceInner
             index={"01"}
             title={"Cut & Editing"}
@@ -65,42 +60,72 @@ const ImageSlice = () => {
             context={"Video/audio mixing during a recording or offline​"}
             />
             }
-            imageUrl={"https://is4-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/f9/26/69/f92669cb-c879-6685-7cd8-051928ff92ea/2404b510-b22f-4c12-9fb3-07c120c08745_screen3.png/460x0w.webp"}
+            imageUrl={require("../../images/vedio3.png")}  
           />
-          <ImageCell isReversed={true} cardTitle={"04"} cardText={"Teams webinar"} imageUrl={require("../../images/vedio3.png")} coverContent={
+          <ImageCell isReversed={true} cardTitle={"04"} cardText={"Teams webinar"} imageUrl={require("../../images/vedio4.png")} coverContent={
             <SliceInner
             index={"04"}
-            title={"Teams webinar"}
+            title={"Teams Webinar"}
             context={"Record a webinar with filters, stickers and animations with teams, you are professional and innovative! "}
             
             />
           }/>
         </div>
         <div className="bigImageContainer">
-          <div className="bigImageTitle">Microsoft Custom Filters empower Webinar creators to apply filters and frames via TEAMS meeting </div>
-          <Image
-            preview={false}
-            width={900}
-            height={507}
-            src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/teams_demo.gif"
-          />
-        </div>
-        <div className="bigImageContainer">
-          <div className="bigImageTitle">Rich and innovate graphic materials</div>
-            <Carousel className="CarouselContainer">
-              {/* <div>
-                <h3 style={contentStyle}>1</h3>
-              </div>
+          <div className="bigImageTitle">Microsoft Custom Filters Empower Webinar Creators to Apply Filters and Frames via TEAMS Meeting </div>
               <div>
-                <h3 style={contentStyle}>2</h3>
-              </div> */}
-              <div>
-                <video width="100%" height="100%" controls preload src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/dynamic_frame.mp4">
+                <video width="900" height="507" controls  src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/teams_demo_video.mp4" poster={require("../../images/VideoCore.png")}>
                 </video>
               </div>
-              {/* <div>
-                <h3 style={contentStyle}>4</h3>
-              </div> */}
+        </div>
+        {/* <div className="bigImageContainer">
+              <div className="bigImageTitle">Video Core Capability Exploring Landed in TEAMS and in process of Ignite and GA (mid Oct)</div>
+              <div>
+                <video width="900" height="507" controls src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/frames/dynamic_frame.mp4" >
+                </video>
+              </div>
+        </div> */}
+
+        <div className="bigImageContainer">
+          <div className="bigImageTitle">More Frames to be Released Post GA</div>
+            <Carousel dotPosition = {"top"} className="CarouselContainer" autoplay>
+              <Image
+                preview={false}
+                width={"100%"}
+                height={"100%"}
+                src={require("../../images/slide1.png")}
+              />
+              <Image
+                preview={false}
+                width={"100%"}
+                height={"100%"}
+                src={require("../../images/slide2.png")}
+              />
+              <Image
+                preview={false}
+                width={"100%"}
+                height={"100%"}
+                src={require("../../images/slide3.png")}
+              />
+              <Image
+                preview={false}
+                width={"100%"}
+                height={"100%"}
+                src={require("../../images/slide4.png")}
+              />
+
+              <Image
+                preview={false}
+                width={"100%"}
+                height={"100%"}
+                src={require("../../images/slide5.png")}
+              />
+              <Image
+                preview={false}
+                width={"100%"}
+                height={"100%"}
+                src={require("../../images/slide6.png")}
+              />
             </Carousel>
         </div>
     </div>
