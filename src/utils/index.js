@@ -37,9 +37,9 @@ const getFormatDay = (num) => {
     dateTime = dateTime.setDate(dateTime.getDate() - num)
     const date = new Date(dateTime);
     const year = date.getFullYear();
-    const month = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1);
+    const month = (date.getMonth()+1 <= 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1);
     const displayMonth = date.getMonth()+1;
-    const day = (date.getDate() + 1 < 10 ? '0' + (date.getDate()) : date.getDate());
+    const day = (date.getDate() + 1 <= 10 ? '0' + (date.getDate()) : date.getDate());
     const displayDay = date.getDate() + ' ';
     const yDate = year + '-' + month + '-'+day
     let displayDate;
