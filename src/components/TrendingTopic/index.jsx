@@ -12,7 +12,7 @@ import down from '../../images/down.png';
 import parallel from '../../images/parallel.png';
 import expand from '../../images/expand.png';
 import fold from '../../images/fold.png';
-import { getRecently7days, getTredingTopics, tableData, useSyncCallback } from '../../utils';
+import { getRecently7days, getTredingTopics, getUrlAllParams, useSyncCallback } from '../../utils';
 import classNames from 'classnames';
 const days = getRecently7days();
 const verticals = ['All', 'News', 'Finance', 'Sports', 'Entertainment', 'Others'];
@@ -102,10 +102,16 @@ const TrendingTopic = () => {
     }
     const getRealTableData = useSyncCallback(() => {
         setLoading(true);
-        getTredingTopics({
+        let urlPrams = getUrlAllParams();
+        let secret = urlPrams['secret'];
+        const params = {
             date: days[dataActiveIndex].yDate,
             vertical: verticals[verticalActiveIndex]
-        }).then((json)=> {
+        };
+        if(!!secret) {
+            params['secret'] = secret;
+        }
+        getTredingTopics(params).then((json)=> {
             const trendTopic = revertData(json.data);
             setTrendTopic(trendTopic);
             setLoading(false);

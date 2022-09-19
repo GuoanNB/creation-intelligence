@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState, useCallback } from 'react'
+var _ = require('lodash');
 
 const baseUrl = "https://intelligencedemo.azurewebsites.net"
 
@@ -322,3 +323,20 @@ export const tableData = [
     ]
     }
 ]
+
+
+// 获取url中全部参数的对象
+export const getUrlAllParams = () => {
+    // 解决乱码问题
+    var url = decodeURI(window.location.href)
+    var res = {"secret": null}
+    var url_data = _.split(url, '?').length > 1 ? _.split(url, '?')[1] : null ;
+    if (!url_data) return res;
+    var params_arr = _.split(url_data, '&')
+    _.forEach(params_arr, function(item) {
+           var key = _.split(item, '=')[0]
+           var value = _.split(item, '=')[1]
+           res[key] = value
+    }); 
+    return res
+}
