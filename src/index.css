@@ -16,6 +16,8 @@ body {
   font-family: "Inter";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-smooth: auto;
+  -webkit-font-smoothing: auto;
 }
 
 /* code {

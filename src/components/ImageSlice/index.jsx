@@ -74,7 +74,7 @@ const ImageSlice = () => {
         <div className="bigImageContainer">
           <div className="bigImageTitle">Microsoft Custom Filters Empower Webinar Creators to Apply Filters and Frames via TEAMS Meeting </div>
               <div>
-                <video width="900" height="507" controls  src="https://teamseffectfinaltest3.z22.web.core.windows.net/imagesticker/teams_demo_video.mp4" poster={require("../../images/VideoCore.png")}>
+                <video width="900" height="507" controls  src="https://msphhackathon2022.azureedge.net/files/teams_demo_video.mp4" poster={require("../../images/VideoCore.png")}>
                 </video>
               </div>
         </div>
