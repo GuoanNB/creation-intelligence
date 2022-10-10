@@ -3,11 +3,11 @@ import 'antd/dist/antd.min.css';
 
 import { Logo, NameCard, Shape, Start } from './assets';
 
+import Footer from "./Footer"
 import HeadlineGenerator from "../components/HeadlineGenerator";
 import ImageSlice from "../components/ImageSlice";
 import React from 'react';
 import TrendingTopic from "../components/TrendingTopic";
-import Footer from "./Footer"
 
 const Main = () => {
   const trendingTopicExplorerRef = React.useRef(null);

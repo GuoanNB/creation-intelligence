@@ -1,19 +1,22 @@
 import './index.css';
-import React from 'react';
-import { Table, message } from 'antd';
 import 'antd/dist/antd.min.css';
-import Slider  from './slider';
-import Scarce from '../../images/Scarce.png';
-import raise from '../../images/raise.png';
+
+import { Table, message } from 'antd';
+import { getRecently7days, getTredingTopics, getUrlAllParams, useSyncCallback } from '../../utils';
+
 import Moderate from '../../images/Moderate.png';
+import React from 'react';
 import Saturated from '../../images/Saturated.png';
-import downArrow from '../../images/down-arrow.png';
+import Scarce from '../../images/Scarce.png';
+import Slider  from './slider';
+import classNames from 'classnames';
 import down from '../../images/down.png';
-import parallel from '../../images/parallel.png';
+import downArrow from '../../images/down-arrow.png';
 import expand from '../../images/expand.png';
 import fold from '../../images/fold.png';
-import { getRecently7days, getTredingTopics, getUrlAllParams, useSyncCallback } from '../../utils';
-import classNames from 'classnames';
+import parallel from '../../images/parallel.png';
+import raise from '../../images/raise.png';
+
 const days = getRecently7days();
 const verticals = ['All', 'News', 'Finance', 'Sports', 'Entertainment', 'Others'];
 

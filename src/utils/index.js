@@ -1,5 +1,7 @@
+import { useCallback, useEffect, useState } from 'react'
+
 import axios from "axios";
-import { useEffect, useState, useCallback } from 'react'
+
 var _ = require('lodash');
 
 const baseUrl = "https://intelligencedemo.azurewebsites.net"
@@ -38,9 +40,9 @@ const getFormatDay = (num) => {
     dateTime = dateTime.setUTCDate(dateTime.getUTCDate() - num)
     const date = new Date(dateTime);
     const year = date.getUTCFullYear();
-    const month = (date.getUTCMonth()+1 <= 10 ? '0'+(date.getUTCMonth()+1) : date.getUTCMonth()+1);
+    const month = (date.getUTCMonth()+1 < 10 ? '0'+(date.getUTCMonth()+1) : date.getUTCMonth()+1);
     const displayMonth = date.getUTCMonth()+1;
-    const day = (date.getUTCDate() + 1 <= 10 ? '0' + (date.getUTCDate()) : date.getUTCDate());
+    const day = (date.getUTCDate() + 1 < 10 ? '0' + (date.getUTCDate()) : date.getUTCDate());
     const displayDay = date.getUTCDate() + ' ';
     const yDate = year + '-' + month + '-'+day
     let displayDate;
